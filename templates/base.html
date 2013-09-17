@@ -5,7 +5,7 @@
 	<head>
 		<title >{% page_attribute page_title %}</title>
 		<meta charset="utf-8">
-		<meta http-equiv='refresh' content='30'
+		<meta http-equiv='refresh' content='60'
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!--styles files-->
 		<link rel="stylesheet" media='screen' href="{{STATIC_URL}}css/bootstrap.css" >
@@ -15,8 +15,7 @@
 		<link rel="stylesheet" media= 'screen' href="{{STATIC_URL}}css/mystyle.css">
 	</head>
 <body>
-
-<div id='page'>
+<div id='page2'>
 <!-- navigation bar-->		
 <div class ="navbar " >
 <div class = "navbar-inner" >
@@ -28,6 +27,17 @@
 </div>		
 </div>
 </div>
+
+{% block page %}{% endblock%}
+<div id='footer'>
+<div class='links_at_footer'>
+
+</div>
+<div class='copyright'>
+<p>&copy; 2013</p>
+</div>
+</div>
+
 <!--js links for bootstrap-->
 <script src="{{STATIC_URL}}js/jquery.js"></script>
 <script src="{{STATIC_URL}}js/bootstrap-transition.js"></script>

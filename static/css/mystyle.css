@@ -1,8 +1,56 @@
+#page2{
+background:;
+max-width:87%;
+margin:0px auto;
+border-radius:10px;
+}
 #page{
+margin-top:-20px;
 background:#BFBFBF;
 max-width:85%;
 margin:0px auto;
 padding:10px;
 min-height:100px;
+border-radius:10px;
 }
+#footer{
+max-width:87%;
+margin:0px auto;
+}
+/*
+ *style for home.html 
+ * */
+.slides_and_links{
+width:97%;
+margin:0px auto;
+height:400px;
+} 
+.links{
+width:30%;
+float:left;
+background:blue;
+}
+.slides{
+width:67%;
+float:right;
+}
+#contents_of_img{
+width:100%;
+}
+#slide img{
+height:390px;
+width:100%;
+border-radius:5px;
+background-color:white;
+}
+.about_site{
+width:85%;
+padding:20px;
+margin:10px auto;
+border-radius:8px;
+background:blue;
+min-height:100px;
+}
+
+
 

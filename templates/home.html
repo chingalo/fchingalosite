@@ -1,4 +1,42 @@
 {% extends "base.html" %}
+{% load cms_tags menu_tags %}
 {% block page %}
+<div id='page'>
+<!--slides and links-->
+<div class ='slides_and_links'>
+<!--links to apps-->
+<div class='links'>
+{% placeholder links or %} not yet added {% endplaceholder  %}
+</div>
+<!--slides-->
+<div class='slides'>
+<div id="myCarousel" class="carousel slide"> 
+<div id='slide' class ='carousel-inner' >
+<!--items for slide show-->	
+<div class='item active' >
+<img src="{{MEDIA_URL}}images/Selection_005.png " alt="" >
+<div class="carousel-caption" id='contents_of_img'>
+<h4> </h4>
+<p></p>
+</div>
+</div>
+<!--end of item-->	
+<div class='item ' >
+<img src="{{MEDIA_URL}}images/Selection_004.png" alt="" >
+<div class="carousel-caption" id='contents_of_img'>
+<h4> </h4>
+<p></p>
+</div>
+</div>
+<!--end of item-->
+</div>
+</div>
+</div>
 
+</div>
+<div class = 'about_site'>
+{% placeholder about_the_site or %} not yet added {% endplaceholder %}
+</div>
+</div>
 {% endblock%}
+
