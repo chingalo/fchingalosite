@@ -2,6 +2,11 @@
 {% load cms_tags menu_tags %}
 {% block page %}
 <div id='page'>
-
+<div id='first_part'>
+{% placeholder first_part or %} not yet added {% endplaceholder %}
+</div>
+<div id='second_part'>
+{% placeholder second_part or %} not yet added {% endplaceholder %}
+</div>
 </div>
 {% endblock%}

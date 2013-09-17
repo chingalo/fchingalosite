@@ -14,9 +14,23 @@ min-height:100px;
 border-radius:10px;
 }
 #footer{
-max-width:87%;
+max-width:85%;
 margin:0px auto;
+margin-top:20px;
+border-top:1px groove #ADD8E6;
+padding:10px;
 }
+.links_at_footer{
+text-align:right;
+padding-right:5px;
+}
+.links_at_footer a{
+padding-right:50px;}
+.copyright{
+margin-top:20px;
+text-align:center;
+}
+
 /*
  *style for home.html 
  * */
@@ -26,9 +40,12 @@ margin:0px auto;
 height:400px;
 } 
 .links{
-width:30%;
+width:28%;
 float:left;
 background:blue;
+height:370px;
+padding:10px;
+border-radius:5px;
 }
 .slides{
 width:67%;
@@ -50,7 +67,41 @@ margin:10px auto;
 border-radius:8px;
 background:blue;
 min-height:100px;
+text-align:justify;
+font-family:;
+font-style:;
+color:;
 }
+/*
+ * style for otherpage.html
+ * 
+ * 
+ * */
+#first_part{
+width:95%;
+margin:5px auto;
+min-height:100px;
+text-align:justify;
+font-family:;
+font-style:;
+color:;
+}
+#second_part{
+width:95%;
+margin:5px auto;
+min-height:100px;
+text-align:justify;
+font-family:;
+font-style:;
+color:;
+}
+
+
+
+
+
+
+
 
 
 
