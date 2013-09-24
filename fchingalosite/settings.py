@@ -197,6 +197,7 @@ INSTALLED_APPS = (
     'cms_redirects',
     'easy_thumbnails',
     'cms.plugins.inherit',
+    'slideshow',
 
 )# A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
