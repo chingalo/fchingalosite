@@ -14,5 +14,7 @@ class Contacts(models.Model):
 	def __unicode__(self):   # Python 3: def __str__(self):
 		return self.first_name
 
-#class ContactsPlugin(CMSPlugin):
-	#title=models.CharField(max_length=200, default='contacts ')
+class ContactsPlugin(CMSPlugin):
+	title=models.CharField(max_length=200, default='contacts')
+class ServicesPlugin(CMSPlugin):
+	title = models.CharField(max_length=200, default='services')

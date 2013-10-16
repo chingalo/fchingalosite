@@ -22,6 +22,20 @@ text-align:jusify;
 max-width:80%;
 margin:0px auto;
 }
+#contacts{
+font-family:;
+text-align: justify;
+color:;
+border-radius:10px;
+background-color:#E5E5E5;
+padding:10px;
+margin-bottom:10px;
+}
+#contacts #name{
+font-size:17px;
+font-style:bold;
+font-family:;
+}
 #footer{
 max-width:78%;
 margin:5px auto;
