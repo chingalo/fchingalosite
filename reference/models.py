@@ -17,5 +17,5 @@ class Reference_file(models.Model):
 	def __unicode__(self): # Python 3: def __str__(self):
 		return self.name_of_file
 		
-#class ContactsPlugin(CMSPlugin):
-	#title=models.CharField(max_length=200, default='contacts ')
+#class ReferencePlugin(CMSPlugin):
+	#title=models.CharField(max_length=200, default='references of company')
