@@ -6,7 +6,7 @@ class Contacts(models.Model):
 	middle_name = models.CharField(max_length=200, blank=True)
 	surname = models.CharField(max_length=200, blank=True)
 	e_mail = models.EmailField(max_length=200,  blank=True)
-	mobile_phone = models.CharField(max_length=20, blank=True)
+	mobile_phone = models.CharField(max_length=2000, blank=True)
 	location = models.CharField(max_length=200, blank=True)
 	duty = models.TextField(max_length=2000, blank=True)
 	message = models.TextField(max_length=20000000, blank=True)
