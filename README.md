@@ -4,7 +4,7 @@ Library based website for consultancy institution.
 It is python powered django cms website,
 It aims to store and views all references and reports for consultancy institution.
 
-How to install this site.
+How to install this site:
 ====================================
 Install virtualenv on your machine and use it to maintain the site.
 The following are couple of commands for operating under virtual env:

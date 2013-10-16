@@ -2,17 +2,26 @@
 max-width:80%;
 margin:8px auto;
 border-radius:10px;
+
 }
+
 #breadcrumbs{
 max-width:80%;
 margin:3px auto;
 border-radius:10px;
 }
 #contents_of_pages{
-max-width:79%;
+max-width:80%;
 margin:5px auto;
 }
-
+.page_contents{
+padding:10px;
+font-family:;
+color:;
+text-align:jusify:;
+max-width:80%;
+margin:0px auto;
+}
 #footer{
 max-width:78%;
 margin:5px auto;
