@@ -17,6 +17,21 @@ class ContactsPlugin(CMSPluginBase):
 		})
 		return context		
 
-class         
+class ServicesPlugin(CMSPluginBase):
+	model = ServicesPlugin
+	name = "services Plugin"
+	render_template = "plugins/services.html" 
+	def render(self, context, instance, placeholder):
+		services = Contacts.objects.all()
+		context.update({
+			'instance': instance,
+			'services': services,
+			'placeholder': placeholder,
+		})
+		return context     
 
 plugin_pool.register_plugin(ContactsPlugin)
+plugin_pool.register_plugin(ServicesPlugin)
+
+
+

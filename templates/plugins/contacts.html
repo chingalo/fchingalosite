@@ -2,7 +2,9 @@
 {% if contacts %}
 {% for contact in contacts %}
 <div id='contacts'>
-<p id='name'>{{ contact.first_name }} &nbsp;&nbsp;&nbsp;&nbsp; {{contact.middle_name}}  &nbsp;&nbsp;&nbsp;&nbsp; {{contact.surname}}</p>
+<p id='name'>{{ contact.first_name }} &nbsp;&nbsp;&nbsp;&nbsp; 
+{{contact.middle_name}}  &nbsp;&nbsp;&nbsp;&nbsp; {{contact.surname}}
+</p>
 <p> {{ contact.e_mail}}</p>
 <p> {{ contact.mobile_phone}}</p>
 <p> {{ contact.location}}</p>
