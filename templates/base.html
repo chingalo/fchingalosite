@@ -15,11 +15,11 @@
 		<link rel="stylesheet" media= 'screen' href="{{STATIC_URL}}css/mystyle.css">
 	</head>
 <body>
-<div id='page2'>
+<div id='navigation_bar'>
 <!-- navigation bar-->		
 <div class ="navbar " >
 <div class = "navbar-inner" >
-<div class ='container'>
+<div class ='containe-fluid'>
 <ul class="nav"> 
 {% show_menu 0 100 100 100 "navigation.html" %}	
 </ul>
@@ -27,16 +27,23 @@
 </div>		
 </div>
 </div>
-
-{% block page %}{% endblock%}
+<!--breadcrums-->
+<div id='breadcrumbs'>
+<ul class='breadcrumb'style=' text-align:left'>
+{% show_breadcrumb %}<span class="pull-right"><em>{% now "jS F Y" %}</em></span>
+</ul>
+</div>
+<div id='contents_of_pages'>
+{% block page_contents %}{% endblock%}
+</div>
 <div id='footer'>
 <div class='links_at_footer'>
-<a href='https://twitter.com/profchingalo'><img width='30px' height='30px' src="{{MEDIA_URL}}images/twitter.png " alt="" ></a>
-<a href='https://www.facebook.com/profs.chingalo'><img width='30px' height='30px'  src="{{MEDIA_URL}}images/Facebook.png " alt="" ></a>
+<a href=''><img width='30px' height='30px' src="{{MEDIA_URL}}images/twitter.png " alt="" ></a>
+<a href=''><img width='30px' height='30px'  src="{{MEDIA_URL}}images/Facebook.png " alt="" ></a>
 </div>
 <div class='copyright'>
-<p>profs chingalo</p>
-<p>&copy; 2013</p>
+<p style='text-align:left;'>Created by Joseph Chingalo, computer science's student at UDSM<br><br></p>
+<p>&copy; 2013<br> all right reserved</p>
 </div>
 </div>
 
@@ -63,7 +70,7 @@
 <script src="{{STATIC_URL}}js/bootstrap-affix.js"></script>
 <script src="{{STATIC_URL}}js/prettify.js"></script>
 <script src="{{STATIC_URL}}js/application.js"></script>
-<!--end of js files from bootstrap-->	 	
+<!--end of js files from bootstrap-->	
 </body>
 
 </html>

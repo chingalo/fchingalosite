@@ -7,7 +7,7 @@ from slideshow.models import  *
 class SlidePlugin(CMSPluginBase):
     model = SlideshowPlugin
     name = "Slideshow Plugin"
-    render_template = "pages/hello_plugin.html"
+    render_template = "plugins/slideshow_plugin.html"
     
     def render(self, context, instance, placeholder):
         latest = Slideshow.objects.all()
