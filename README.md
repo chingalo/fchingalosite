@@ -30,7 +30,7 @@ Inside fchingalosite directory, install project dependencies inside: deps.txt
 	
 	$ cd fchingalosite
 	$ pip install -r deps.txt
-Add database and email configurations inside fchingalosite/settings.py, your
+Add database  configurations inside fchingalosite/settings.py, your
 database configurations should look something similar to this:
 	
 	DATABASES = {
