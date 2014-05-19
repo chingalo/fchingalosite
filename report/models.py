@@ -15,15 +15,15 @@ class Details_of_Report(models.Model):
 	name_of_receiver = models.ForeignKey('Receiver_of_report', on_delete=models.CASCADE)
 	report_title = models.CharField(max_length=200)
 	description_of_report = models.TextField(max_length=200000, blank=True)
-	date_of_submission = models.DateField('date of event')
+	date_of_submission = models.DateField('date of submission of report')
 	
 	def __unicode__(self):	# Python 3: def __str__(self):
 		return self.report_title
 
 class Report_files(models.Model):
 	report_title = models.ForeignKey('Details_of_report', on_delete=models.CASCADE)	
-	report_file = models.FileField(upload_to='reports')
 	name_of_report_file = models.CharField(max_length=200)
+	report_file = models.FileField(upload_to='reports')
 	
 	def __unicode__(self):	# Python 3: def __str__(self):
 		return self.name_of_report_file
