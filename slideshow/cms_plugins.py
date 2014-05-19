@@ -4,7 +4,7 @@ from cms.models.pluginmodel import CMSPlugin
 from django.utils.translation import ugettext_lazy as _
 from slideshow.models import  *
 
-class SlideshowHome(CMSPluginBase):
+class SlideshowPluginHome(CMSPluginBase):
     model = SlideshowHomePlugin
     name = "Home slideshow Plugin"
     render_template = "plugins/slideshow_plugin.html"
@@ -18,7 +18,7 @@ class SlideshowHome(CMSPluginBase):
         })
         return context
 
-class SlideshowReference(CMSPluginBase):
+class SlideshowPluginReference(CMSPluginBase):
     model = SlideshowReferencePlugin
     name = "Reference slideshow Plugin"
     render_template = "plugins/slideshow_plugin.html"
@@ -32,7 +32,7 @@ class SlideshowReference(CMSPluginBase):
         })
         return context
         
-class SlideshowReport(CMSPluginBase):
+class SlideshowPluginReport(CMSPluginBase):
     model = SlideshowReportPlugin
     name = "Report slidesho Plugin"
     render_template = "plugins/slideshow_plugin.html"
@@ -46,7 +46,7 @@ class SlideshowReport(CMSPluginBase):
         })
         return context
         
-class SlideshowSearch(CMSPluginBase):
+class SlideshowPluginSearch(CMSPluginBase):
     model = SlideshowSearchPlugin
     name = "Search slideshow Plugin"
     render_template = "plugins/slideshow_plugin.html"
@@ -60,7 +60,7 @@ class SlideshowSearch(CMSPluginBase):
         })
         return context
                         
-plugin_pool.register_plugin(SlideshowHome)
-plugin_pool.register_plugin(SlideshowReference)
-plugin_pool.register_plugin(SlideshowReport)
-plugin_pool.register_plugin(SlideshowSearch)
+plugin_pool.register_plugin(SlideshowPluginHome)
+plugin_pool.register_plugin(SlideshowPluginReference)
+plugin_pool.register_plugin(SlideshowPluginReport)
+plugin_pool.register_plugin(SlideshowPluginSearch)
