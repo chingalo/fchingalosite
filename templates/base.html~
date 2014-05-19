@@ -1,0 +1,76 @@
+{% load sekizai_tags i18n cms_tags menu_tags %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title >{% page_attribute page_title %}</title>
+		<meta charset="utf-8">
+		<meta http-equiv='refresh' content='60'
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--styles files-->
+		<link rel="stylesheet" media='screen' href="{{STATIC_URL}}css/bootstrap.css" >
+		<link rel="stylesheet" media='screen' href="{{STATIC_URL}}css/bootstrap-responsive.css" >
+		<link rel="stylesheet" media='screen' href="{{STATIC_URL}}css/docs.css" >
+		<link rel="stylesheet" media='screen' href="{{STATIC_URL}}css/prettify.css" >
+		<link rel="stylesheet" media= 'screen' href="{{STATIC_URL}}css/mystyle.css">
+	</head>
+<body>
+<div id='navigation_bar'>
+<!-- navigation bar-->		
+<div class ="navbar " >
+<div class = "navbar-inner" >
+<div class ='containe-fluid'>
+<ul class="nav"> 
+{% show_menu 0 100 0 100 "navigation.html" %}	
+</ul>
+</div>
+</div>		
+</div>
+</div>
+<!--breadcrums-->
+<div id='breadcrumbs'>
+<ul class='breadcrumb'style=' text-align:left'>
+{% show_breadcrumb %}<span class="pull-right"><em>{% now "jS F Y" %}</em></span>
+</ul>
+</div>
+<div id='contents_of_pages'>
+{% block page_contents %}{% endblock%}
+</div>
+<div id='footer'>
+<div class='links_at_footer'>
+<a href='https://twitter.com/profchingalo'><img width='30px' height='30px' src="{{MEDIA_URL}}images/twitter.png " alt="" >&nbsp;&nbsp;developer</a> 
+<a href='https://www.facebook.com/profs.chingalo/'><img width='30px' height='30px'  src="{{MEDIA_URL}}images/Facebook.png " alt="" >&nbsp;&nbsp;developer</a> 
+<a href='https://www.facebook.com/fchingalosite'><img width='30px' height='30px'  src="{{MEDIA_URL}}images/Facebook.png " alt="" >&nbsp;&nbsp;about site</a> 
+</div>
+<div class='copyright'>
+<p style='text-align:left;'>Created by Joseph Chingalo, computer science's student at UDSM<br><br></p>
+<p>&copy; 2014<br> all right reserved</p>
+</div>
+</div>
+
+<!--js links for bootstrap-->
+<script src="{{STATIC_URL}}js/jquery.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap-transition.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap-alert.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap-modal.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap-dropdown.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap-scrollspy.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap-tab.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap-tooltip.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap-popover.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap-collapse.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap-carousel.js"></script>
+<script>
+	!function ($) {
+		 $('#myCarousel').carousel()
+		})
+	 }(window.jQuery)
+</script>
+<script src="{{STATIC_URL}}js/bootstrap-affix.js"></script>
+<script src="{{STATIC_URL}}js/holder.js"></script>
+<script src="{{STATIC_URL}}js/bootstrap-affix.js"></script>
+<script src="{{STATIC_URL}}js/prettify.js"></script>
+<script src="{{STATIC_URL}}js/application.js"></script>
+<!--end of js files from bootstrap-->	
+</body>
+</html>
