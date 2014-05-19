@@ -28,5 +28,4 @@ class Report_files(models.Model):
 	def __unicode__(self):	# Python 3: def __str__(self):
 		return self.name_of_report_file
 	
-#class ContactsPlugin(CMSPlugin):
-	#title=models.CharField(max_length=200, default='contacts ')
+
