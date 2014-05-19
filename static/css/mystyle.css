@@ -22,6 +22,9 @@ text-align:justify;
 max-width:70%;
 margin:0px auto;
 }
+.links_header{
+font-size:15px;
+}
 #contacts{
 font-family:;
 text-align: justify;
@@ -52,20 +55,7 @@ font-family:;
 }
 #footer{
 max-width:70%;
-margin:5px auto;
-margin-top:20px;
-border-top:1px groove #ADD8E6;
-padding:10px;
-}
-.links_at_footer{
-text-align:right;
-padding-right:5px;
-}
-.links_at_footer a{
-padding-right:50px;}
-.copyright{
-margin-top:20px;
-text-align:center;
+margin:0px auto;
 }
 
 
