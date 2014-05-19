@@ -1,5 +1,5 @@
 from django.contrib import admin
-from slideshow.models import Slideshow
+from slideshow.models import *
 
 class SlideshowAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -13,4 +13,7 @@ class SlideshowAdmin(admin.ModelAdmin):
     search_fields = ['desc_title']
 
 
-admin.site.register(Slideshow,SlideshowAdmin)
+admin.site.register(SlideshowHome,SlideshowAdmin)
+admin.site.register(SlideshowReference,SlideshowAdmin)
+admin.site.register(SlideshowReport,SlideshowAdmin)
+admin.site.register(SlideshowSearch,SlideshowAdmin)
