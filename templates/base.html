@@ -5,9 +5,9 @@
 	<head>
 		<title >{% page_attribute page_title %}</title>
 		<meta charset="utf-8">
-		<meta http-equiv='refresh' content='60'
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!--styles files-->
+		
+		<!---------------styles files---------------------------------------->
 		<link rel="stylesheet" media='screen' href="{{STATIC_URL}}css/bootstrap.css" >
 		<link rel="stylesheet" media='screen' href="{{STATIC_URL}}css/bootstrap-responsive.css" >
 		<link rel="stylesheet" media='screen' href="{{STATIC_URL}}css/docs.css" >
@@ -15,8 +15,9 @@
 		<link rel="stylesheet" media= 'screen' href="{{STATIC_URL}}css/mystyle.css">
 	</head>
 <body>
+		
 <div id='navigation_bar'>
-<!-- navigation bar-->		
+<!-- -------------navigation bar--------------->		
 <div class ="navbar " >
 <div class = "navbar-inner" >
 <div class ='containe-fluid'>
@@ -27,28 +28,69 @@
 </div>		
 </div>
 </div>
-<!--breadcrums-->
+
+<!-----------breadcrums------------------------->
 <div id='breadcrumbs'>
 <ul class='breadcrumb'style=' text-align:left'>
 {% show_breadcrumb %}<span class="pull-right"><em>{% now "jS F Y" %}</em></span>
 </ul>
 </div>
+
+<!-- ---------------contents of page ------- ---->
 <div id='contents_of_pages'>
-{% block page_contents %}{% endblock%}
+	<div class = "row-fluid">
+		<div class = "span9">
+			{% block page_contents %}{% endblock%}		
+		</div>
+		<div class = "span3 userful_links " >
+			<ul class = "nav nav-list">
+				<li class = "nav-header links_header">Useful links</li>
+				<li >{% placeholder useful_link1  %}</li>
+				<li>{% placeholder useful_link2  %}</li>
+				<li>{% placeholder useful_link3  %}</li>
+				<li>{% placeholder useful_link4  %}</li>
+				<li>{% placeholder useful_link5  %}</li>			
+			</ul>
+		</div>	
+	</div>
+
 </div>
+
+<!---------------- footer ---------------------->
 <div id='footer'>
-<div class='links_at_footer'>
-<a href='https://twitter.com/profchingalo'><img width='30px' height='30px' src="{{MEDIA_URL}}images/twitter.png " alt="" >&nbsp;&nbsp;developer</a> 
-<a href='https://www.facebook.com/profs.chingalo/'><img width='30px' height='30px'  src="{{MEDIA_URL}}images/Facebook.png " alt="" >&nbsp;&nbsp;developer</a> 
-<a href='https://www.facebook.com/fchingalosite'><img width='30px' height='30px'  src="{{MEDIA_URL}}images/Facebook.png " alt="" >&nbsp;&nbsp;about site</a> 
-</div>
-<div class='copyright'>
-<p style='text-align:left;'>Created by Joseph Chingalo, computer science's student at UDSM<br><br></p>
-<p>&copy; 2014<br> all right reserved</p>
+	<hr>
+	<div class = "row-fluid">
+		<p style = "text-align:center;">Contact us</p><br>
+		<div class = "span4">
+			<address>
+				<strong>The Developer,</strong><br/>
+				Mr. Joseph Chingalo<br>
+				Computer Science Student - UDSM<br>
+				<abbr title="Phone number">P:</abbr> +255 687168637 or<br>  +255 718922311<br>	
+				<a href="mailto:profschingalo@gmail.com" style="color: #4D4D4D;">profschingalo@gmail.com</a><br>
+				<a href="https://www.facebook.com/profs.chingalo" style="color: #4D4D4D;">facebook</a><br>	
+				<a href="https://twitter.com/profchingalo" style="color: #4D4D4D;">Twitter</a><br>	
+				<a href="http://instagram.com/profschingalo" style="color: #4D4D4D;">Instagram</a><br>	
+			</address>		
+		</div>
+		
+		<div class = "span4">
+			<address>
+				<strong>The Consultant,</strong><br/>
+				Mr. PhilibertChingalo<br>
+				P.O.Box 10112,<br>
+				Dar-es-salaam.<br>
+				<abbr title="Phone">P:</abbr> +255 784331413 or<br> +255 752134497<br>	
+				<a href="mailto:fchingalo@yahoo.com" style="color: #4D4D4D;">fchingalo@yahoo.com</a><br>
+				<a href="https://www.facebook.com/philibert.chingalo" style="color: #4D4D4D;">facebook</a><br>				
+			</address>
+		
+		</div>	
+	</div>
 </div>
 </div>
 
-<!--js links for bootstrap-->
+<!--------------------js links for bootstrap---------->
 <script src="{{STATIC_URL}}js/jquery.js"></script>
 <script src="{{STATIC_URL}}js/bootstrap-transition.js"></script>
 <script src="{{STATIC_URL}}js/bootstrap-alert.js"></script>
@@ -71,6 +113,7 @@
 <script src="{{STATIC_URL}}js/bootstrap-affix.js"></script>
 <script src="{{STATIC_URL}}js/prettify.js"></script>
 <script src="{{STATIC_URL}}js/application.js"></script>
-<!--end of js files from bootstrap-->	
+<!-- -----------end of js files from bootstrap---------->
+	
 </body>
 </html>
