@@ -1,25 +1,25 @@
 #navigation_bar{
-max-width:80%;
+max-width:70%;
 margin:8px auto;
 border-radius:10px;
 
 }
 
 #breadcrumbs{
-max-width:80%;
+max-width:70%;
 margin:3px auto;
 border-radius:10px;
 }
 #contents_of_pages{
-max-width:80%;
+max-width:70%;
 margin:5px auto;
 }
 .page_contents{
 padding:10px;
 font-family:;
 color:;
-text-align:jusify;
-max-width:80%;
+text-align:justify;
+max-width:70%;
 margin:0px auto;
 }
 #contacts{
@@ -51,7 +51,7 @@ font-style:bold;
 font-family:;
 }
 #footer{
-max-width:78%;
+max-width:70%;
 margin:5px auto;
 margin-top:20px;
 border-top:1px groove #ADD8E6;
