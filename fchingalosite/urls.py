@@ -14,12 +14,14 @@ urlpatterns = patterns('',
 
      url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('cms.urls')),
+    
+    
 )+ staticfiles_urlpatterns()
 
 if settings.DEBUG:
     urlpatterns = patterns('',
-		url(r'^reference/', include('reference.urls')),
-		url(r'^report/', include('report.urls')),
+		url(r'^referenceupload/', include('reference.urls')),
+		url(r'^reportupload/', include('report.urls')),
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT,
         'show_indexes': True}),
