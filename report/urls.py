@@ -3,7 +3,9 @@ from django.conf.urls import patterns, url
 from report import views
 
 urlpatterns = patterns('',
-#example:  url(r'^$', views.index, name='view_all_polls'),
+    url(r'^$', views.reportStep1, name='reportStep1'),
+    #url(r'step1^$', views.reportStep2, name='reportStep2'),
+    #url(r'step1^$', views.reportStep3, name='reportStep3'),
 
-
+#url(r'step1^$', views.authorize, name='authorize'),
 )

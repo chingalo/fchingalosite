@@ -2,7 +2,9 @@ from django.conf.urls import patterns, url
 
 from reference import views
 urlpatterns = patterns('',
-#example:  url(r'^$', views.index, name='view_all_polls'),
-
-
-)
+    url(r'^$', views.referenceStep1, name='referenceStep1'),
+    #url(r'step2^$', views.referenceStep2, name='referenceStep2'),
+    
+    
+    
+    )
