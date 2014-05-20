@@ -116,6 +116,8 @@ LANGUAGES = [
 #templates for cms
 CMS_TEMPLATES = ( 
 	('home.html', gettext('pages')),
+	('reportStep1.html', gettext('upload report step1')),
+	('referenceStep1.html', gettext('upload reference step 1')),
               
    )
 CMS_LANGUAGES = {
