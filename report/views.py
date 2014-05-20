@@ -65,7 +65,7 @@ def reportUploadStep3(request):
 		
 	#checking for posted form
 	if request.POST:
-		form = reportStep3Form(request.POST)
+		form = reportStep3Form(request.POST, request.FILES)
 		#check if all field have been filled
 		if form.is_valid():
 			m = " ready to save, ok "
