@@ -8,9 +8,25 @@ from reference.forms import *
 def referenceUploadStep1(request):
 	#control variable in template
 	step = "step1"
-	form = referenceStep1()
 	
-	context = {'step':step,'form':form,}
+	#checking for posted form
+	if request.POST:
+		form = referenceStep1(request.POST)
+		#check if all field have been filled
+		if form.is_valid():
+			m = " ready to save, ok "
+			step = "step2"
+			
+		else:
+			m = "ready to save, not ok "	
+		
+		
+	else:
+		form = referenceStep1()
+		m = " not ok "
+	
+		
+	context = {'step':step,'form':form,'m':m}
 	return render(request, 'referenceUpload.html', context)
 
 def referenceUploadStep2(request):
