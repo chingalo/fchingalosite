@@ -15,6 +15,9 @@ def reportUploadStep1(request):
 		#check if all field have been filled
 		if form.is_valid():
 			m = " ready to save, ok "
+			#save the form and shift to step two
+			#form.save()
+			form = reportStep2Form()
 			step = "step2"
 			
 		else:
@@ -33,12 +36,51 @@ def reportUploadStep2(request):
 	#control variable in template
 	step = "step2"
 		
-	context = {'step':step,}
+	#checking for posted form
+	if request.POST:
+		form = reportStep2Form(request.POST)
+		#check if all field have been filled
+		if form.is_valid():
+			m = " ready to save, ok "
+			#save the form and shift to step two
+			#form.save()
+			form = reportStep3Form()
+			step = "step3"
+			
+		else:
+			m = "ready to save, not ok "	
+		
+		
+	else:
+		form = reportStep2Form()
+		m = " not ok "
+	
+		
+	context = {'step':step,'form':form,'m':m}
 	return render(request, 'reportUpload.html', context)
 	
 def reportUploadStep3(request):
 	#control variable in template
 	step = "step3"
 		
-	context = {'step':step,}
+	#checking for posted form
+	if request.POST:
+		form = reportStep3Form(request.POST)
+		#check if all field have been filled
+		if form.is_valid():
+			m = " ready to save, ok "
+			#save the form and shift to step two
+			#form.save()
+			
+			
+		else:
+			m = "ready to save, not ok "	
+		
+		
+	else:
+		form = reportStep3Form()
+		m = " not ok "
+	
+		
+	context = {'step':step,'form':form,'m':m}
 	return render(request, 'reportUpload.html', context)	

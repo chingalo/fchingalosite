@@ -11,10 +11,13 @@ def referenceUploadStep1(request):
 	
 	#checking for posted form
 	if request.POST:
-		form = referenceStep1(request.POST)
+		form = referenceStep1Form(request.POST)
 		#check if all field have been filled
 		if form.is_valid():
 			m = " ready to save, ok "
+			#save the form and shift to step two
+			#form.save()
+			form = referenceStep2Form()
 			step = "step2"
 			
 		else:
@@ -22,7 +25,7 @@ def referenceUploadStep1(request):
 		
 		
 	else:
-		form = referenceStep1()
+		form = referenceStep1Form()
 		m = " not ok "
 	
 		
@@ -33,8 +36,26 @@ def referenceUploadStep2(request):
 	#control variable in template
 	step = "step2"
 	
+	#checking for posted form
+	if request.POST:
+		form = referenceStep2Form(request.POST, request.FILES)
+		#check if all field have been filled
+		if form.is_valid():
+			m = " ready to save, ok "
+			#save the form and shift to step two
+			#form.save()
+			
+			
+		else:
+			m = "ready to save, not ok "	
+		
+		
+	else:
+		form = referenceStep2Form()
+		m = " not ok "
 	
-	context = {'step':step,}
+		
+	context = {'step':step,'form':form,'m':m}
 	return render(request, 'referenceUpload.html', context)
 	
 	
