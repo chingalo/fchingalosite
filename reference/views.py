@@ -5,15 +5,15 @@ from django.core.urlresolvers import reverse
 from reference.models import *
 from reference.forms import *
 
-def referenceStep1(request):
+def referenceUploadStep1(request):
 	#control variable in template
 	step = "step1"
+	form = referenceStep1()
 	
-	
-	context = {'step':step,}
+	context = {'step':step,'form':form,}
 	return render(request, 'referenceUpload.html', context)
 
-def referenceStep2(request):
+def referenceUploadStep2(request):
 	#control variable in template
 	step = "step2"
 	
