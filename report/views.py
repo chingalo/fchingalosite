@@ -6,5 +6,22 @@ from report.models import *
 from report.models import *
 
 def reportStep1(request):
-	context = {'message':'step 1'}
-	return render(request, 'reportStep1.html', context)
+	#control variable in template
+	step = "step1"
+		
+	context = {'step':step,}
+	return render(request, 'reportUpload.html', context)
+
+def reportStep2(request):
+	#control variable in template
+	step = "step2"
+		
+	context = {'step':step,}
+	return render(request, 'reportUpload.html', context)
+	
+def reportStep3(request):
+	#control variable in template
+	step = "step3"
+		
+	context = {'step':step,}
+	return render(request, 'reportUpload.html', context)	

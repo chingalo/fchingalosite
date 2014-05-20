@@ -6,5 +6,19 @@ from reference.models import *
 from reference.forms import *
 
 def referenceStep1(request):
-	context = {'message':'step 1'}
-	return render(request, 'referenceStep1.html', context)
+	#control variable in template
+	step = "step1"
+	
+	
+	context = {'step':step,}
+	return render(request, 'referenceUpload.html', context)
+
+def referenceStep1(request):
+	#control variable in template
+	step = "step2"
+	
+	
+	context = {'step':step,}
+	return render(request, 'referenceUpload.html', context)
+	
+	
