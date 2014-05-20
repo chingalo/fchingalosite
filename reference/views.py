@@ -13,7 +13,7 @@ def referenceStep1(request):
 	context = {'step':step,}
 	return render(request, 'referenceUpload.html', context)
 
-def referenceStep1(request):
+def referenceStep2(request):
 	#control variable in template
 	step = "step2"
 	
