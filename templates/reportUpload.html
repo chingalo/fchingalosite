@@ -8,14 +8,32 @@
 		<!-------- upload step 1 ----------->
 		{% if step == "step1" %}
 		
-		<p>I am in step one</p>
+		<p>I am in step one</p>{{m}}<hr>
+		
+		<form action = "{% url 'reportStep1'  %}" method = "POST" >
+			{% csrf_token %}
+			<table class="table table-striped">
+				{{form.as_table}}			
+			</table>
+			<input type = "submit" value = "Upload" name = "submit">&#160;&#160;
+			<input type = "reset" value = "Cancel" name = "reset">					
+		</form>		
 		
 		{% endif %}
 		
 		<!-------- upload step 2 ----------->
 		{% if step == "step2" %}
 		
-		<p>I am in step two</p>
+		<p>I am in step two</p><hr>
+		
+		<form action = "" method = "">
+			{% csrf_token %}
+			<table class="table table-striped">
+				{{form.as_table}}			
+			</table>
+			<input type = "submit" value = "Upload" name = "submit">&#160;&#160;
+			<input type = "reset" value = "Cancel" name = "reset">					
+		</form>
 		
 		{% endif %}
 				
@@ -23,7 +41,16 @@
 		<!-------- upload step 3 ----------->
 		{% if step == "step3" %}
 		
-		<p>I am in step three</p>
+		<p>I am in step three</p><hr>
+		
+		<form action = "" method = "" enctype = 'multipart/form-data'>
+			{% csrf_token %}
+			<table class="table table-striped">
+				{{form.as_table}}			
+			</table>
+			<input type = "submit" value = "Upload" name = "submit">&#160;&#160;
+			<input type = "reset" value = "Cancel" name = "reset">					
+		</form>
 		
 		{% endif %}
 		
