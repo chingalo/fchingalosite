@@ -1,12 +1,32 @@
 {% extends "base.html" %}
 {% load cms_tags menu_tags %}
 
-<!-- contents for home pages of reference, report and home page of the site -->
+<!-- contents for uploading a refence into the system -->
 {% block page_contents %}
 <div class = "row-fluid">
 	<div class = "well">
+		<!-------- upload step 1 ----------->
+		{% if step == "step1" %}
 		
-		{{message}}
+		<p>I am in step one</p>
+		
+		{% endif %}
+		
+		<!-------- upload step 2 ----------->
+		{% if step == "step2" %}
+		
+		<p>I am in step two</p>
+		
+		{% endif %}
+				
+		
+		<!-------- upload step 3 ----------->
+		{% if step == "step3" %}
+		
+		<p>I am in step three</p>
+		
+		{% endif %}
+		
 	</div>	
 </div>
 {% endblock%}
