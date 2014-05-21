@@ -20,7 +20,7 @@
 				<input type = "reset" value = "Cancel" name = "reset">			
 			</span>				
 		</form>
-		<span class="pull-left"><button onclick="window.location.href='/reportupload/step2'">Skip this step</button></span>		
+		<span class="pull-left"><button onclick="window.location.href='{% url 'reportStep2'  %}'">Skip this step</button></span>		
 		<br>
 		{% endif %}
 		
@@ -39,7 +39,7 @@
 				<input type = "reset" value = "Cancel" name = "reset">			
 			</span>					
 		</form>
-		<span class="pull-left"><button onclick="window.location.href='/reportupload/step3'">Skip this step</button></span>
+		<span class="pull-left"><button onclick="window.location.href='{% url 'reportStep3'  %}'">Skip this step</button></span>
 		<br>
 		
 		{% endif %}
