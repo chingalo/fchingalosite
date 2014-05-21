@@ -1,9 +1,9 @@
 fchingalosite
 =============
 Library based website for consultancy institution.
-It is python powered django cms website,
+It is python powered Django-cms website,
 It aims to store, organize and download all references and reports for consultancy institution.
-References are orgnized depending on their categories including Finance, Institution, Social and others.
+References are organized depending on their categories including Finance, Institution, Social and others.
 Reports are organized depend on to whom the report have been sent.
 
 How to install this site:
