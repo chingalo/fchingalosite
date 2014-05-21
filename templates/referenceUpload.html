@@ -8,7 +8,7 @@
 		<!-------- upload step 1 ----------->
 		{% if step == "step1" %}
 		
-		<p>I am in step one</p>{{m}}<hr>
+		<p>I am in step one</p><hr>
 		
 		<form action = "{% url 'referenceStep1'  %}" method = "POST" enctype = 'multipart/form-data'>
 			{% csrf_token %}
