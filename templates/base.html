@@ -42,16 +42,14 @@
 		<div class = "span9"  >
 			{% block page_contents %}{% endblock%}		
 		</div>
+		
 		<div class = "span3 userful_links well " style = "min-height:270px;">
 			<ul class = "nav nav-list">
 				<li class = "nav-header links_header">Useful links</li>
-				<li >{% placeholder useful_link1  %}</li>
-				<li>{% placeholder useful_link2  %}</li>
-				<li>{% placeholder useful_link3  %}</li>
-				<li>{% placeholder useful_link4  %}</li>
-				<li>{% placeholder useful_link5  %}</li>			
+				{% block useful_links %}{% endblock%}
+					
 			</ul>
-		</div>	
+		</div>			
 	</div>
 <hr>
 </div>
