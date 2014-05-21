@@ -5,6 +5,8 @@ from django.core.urlresolvers import reverse
 from reference.models import *
 from reference.forms import *
 
+
+#step 1 for upload reference file
 def referenceUploadStep1(request):
 	#control variable in template
 	step = "step1"
@@ -14,24 +16,25 @@ def referenceUploadStep1(request):
 		form = referenceStep1Form(request.POST)
 		#check if all field have been filled
 		if form.is_valid():
-			m = " ready to save, ok "
+			m = " page saved and redirect "
 			#save the form and shift to step two
 			#form.save()
 			form = referenceStep2Form()
 			step = "step2"
 			
 		else:
-			m = "ready to save, not ok "	
+			m = "page returned "	
 		
 		
 	else:
 		form = referenceStep1Form()
-		m = " not ok "
-	
+			
 		
-	context = {'step':step,'form':form,'m':m}
+	context = {'step':step,'form':form,}
 	return render(request, 'referenceUpload.html', context)
 
+
+#step 2 for upload reference file
 def referenceUploadStep2(request):
 	#control variable in template
 	step = "step2"
@@ -41,21 +44,40 @@ def referenceUploadStep2(request):
 		form = referenceStep2Form(request.POST, request.FILES)
 		#check if all field have been filled
 		if form.is_valid():
-			m = " ready to save, ok "
+			m = " sabed and redirect"
 			#save the form and shift to step two
 			#form.save()
 			
 			
 		else:
-			m = "ready to save, not ok "	
+			m = "page returned"	
 		
 		
 	else:
 		form = referenceStep2Form()
-		m = " not ok "
-	
+			
 		
-	context = {'step':step,'form':form,'m':m}
+	context = {'step':step,'form':form,}
 	return render(request, 'referenceUpload.html', context)
 	
+
+#downloading  reference file 
+def referenceDownload(request):
+	
+	
+	message = "download page for reference, still under development"
+	context = {'message':message,}
+	return render(request, 'downloadreference.html', context)
+	
+
+#search for  reference file or detail		
+def referenceSearch(request):
+	
+	
+	message = "search page for reference, still under development"
+	context = {'message':message,}
+	return render(request, 'searchreference.html', context)
+
+
+
 	

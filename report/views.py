@@ -5,6 +5,7 @@ from django.core.urlresolvers import reverse
 from report.models import *
 from report.forms import *
 
+#step 1 for upload report file
 def reportUploadStep1(request):
 	#control variable in template
 	step = "step1"
@@ -14,24 +15,25 @@ def reportUploadStep1(request):
 		form = reportStep1Form(request.POST)
 		#check if all field have been filled
 		if form.is_valid():
-			m = " ready to save, ok "
+			
 			#save the form and shift to step two
 			#form.save()
 			form = reportStep2Form()
 			step = "step2"
 			
 		else:
-			m = "ready to save, not ok "	
+			m = "page returned "	
 		
 		
 	else:
 		form = reportStep1Form()
-		m = " not ok "
-	
+			
 		
-	context = {'step':step,'form':form,'m':m}
+	context = {'step':step,'form':form,}
 	return render(request, 'reportUpload.html', context)
 
+
+#step 2 for upload report file
 def reportUploadStep2(request):
 	#control variable in template
 	step = "step2"
@@ -41,24 +43,24 @@ def reportUploadStep2(request):
 		form = reportStep2Form(request.POST)
 		#check if all field have been filled
 		if form.is_valid():
-			m = " ready to save, ok "
 			#save the form and shift to step two
 			#form.save()
 			form = reportStep3Form()
 			step = "step3"
 			
 		else:
-			m = "ready to save, not ok "	
+			m = "page returned"	
 		
 		
 	else:
 		form = reportStep2Form()
-		m = " not ok "
-	
+			
 		
-	context = {'step':step,'form':form,'m':m}
+	context = {'step':step,'form':form,}
 	return render(request, 'reportUpload.html', context)
-	
+
+
+#step 3 for upload report file	
 def reportUploadStep3(request):
 	#control variable in template
 	step = "step3"
@@ -68,19 +70,41 @@ def reportUploadStep3(request):
 		form = reportStep3Form(request.POST, request.FILES)
 		#check if all field have been filled
 		if form.is_valid():
-			m = " ready to save, ok "
+			m = "saved and redirect to home page"
 			#save the form and shift to step two
 			#form.save()
 			
 			
 		else:
-			m = "ready to save, not ok "	
+			m = "page returned"	
 		
 		
 	else:
 		form = reportStep3Form()
-		m = " not ok "
-	
+			
 		
-	context = {'step':step,'form':form,'m':m}
+	context = {'step':step,'form':form,}
 	return render(request, 'reportUpload.html', context)	
+
+
+#downloading report file
+def reportDownload(request):
+	page = "report"
+	
+	message = "download page for report, still under development"
+	context = {'message':message,'page':page,}
+	return render(request, 'downloadreport.html', context)
+
+
+#search for  report file or detail	
+def reportSearch(request):
+	
+	
+	message = "search page for report, still under development"
+	context = {'message':message,}
+	return render(request, 'searchreference.html', context)	
+	
+	
+	
+	
+	
