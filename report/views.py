@@ -102,7 +102,7 @@ def reportSearch(request):
 	
 	message = "search page for report, still under development"
 	context = {'message':message,}
-	return render(request, 'searchreference.html', context)	
+	return render(request, 'searchreport.html', context)	
 	
 	
 	
