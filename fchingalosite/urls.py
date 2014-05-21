@@ -20,8 +20,8 @@ urlpatterns = patterns('',
 
 if settings.DEBUG:
     urlpatterns = patterns('',
-		url(r'^referenceupload/', include('reference.urls')),
-		url(r'^reportupload/', include('report.urls')),
+		url(r'^reference/referenceupload/', include('reference.urls')),
+		url(r'^report/reportupload/', include('report.urls')),
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT,
         'show_indexes': True}),
