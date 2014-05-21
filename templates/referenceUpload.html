@@ -45,12 +45,12 @@
 	</div>	
 </div>
 {% endblock%}
+
 {% block useful_links %}
 <li ><a href="/reference/">Reference</a></li>
 <li ><a href="{% url 'referenceStep1'  %}">Upload Reference</a></li>
-<!--
-
-<li ><a href=""></a></li>
-
--->
+<li ><a href="{% url 'referenceDownload'  %}">Download Reference</a></li>
+<li ><a href="{% url 'referenceSearch'  %}">Search Reference</a></li>
 {% endblock%}
+
+

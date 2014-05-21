@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags %}
+
+<!---------------contents for search reference------------------>
+{% block page_contents %}
+<div class = "row-fluid">
+	<div class = "well">
+		{{message}}
+		
+	</div>	
+</div>
+{% endblock%}
+
+{% block useful_links %}
+<li ><a href="/reference/">Reference</a></li>
+<li ><a href="{% url 'referenceStep1'  %}">Upload Reference</a></li>
+<li ><a href="{% url 'referenceDownload'  %}">Download Reference</a></li>
+<li ><a href="{% url 'referenceSearch'  %}">Search Reference</a></li>
+{% endblock%}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags %}
+
+<!-- contents for donload report----- -->
+{% block page_contents %}
+<div class = "row-fluid">
+	<div class = "well">
+		{{message}}	
+				
+	</div>	
+</div>
+{% endblock%}
+
+{% block useful_links %}
+<li ><a href="/report">Report</a></li>
+<li ><a href="{% url 'reportStep1'  %}">Upload Report</a></li>
+<li ><a href="{% url 'reportDownload'  %}">Download Report</a></li>
+<li ><a href="{% url 'reportSearch'  %}">Search Report</a></li>
+{% endblock%}
