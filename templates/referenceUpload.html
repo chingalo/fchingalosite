@@ -15,10 +15,14 @@
 			<table class="table table-striped">
 				{{form.as_table}}					
 			</table>
-			<input type = "submit" value = "Upload" name = "submit">&#160;&#160;
-			<input type = "reset" value = "Cancel" name = "reset">	
+			<span class="pull-right">
+				<input type = "submit" value = "Upload" name = "submit">&#160;&#160;
+				<input type = "reset" value = "Cancel" name = "reset">			
+			</span>	
 								
 		</form>
+		<span class="pull-left"><button onclick="window.location.href='/referenceupload/step2'">Skip this step</button></span>
+		<br>		
 		
 		{% endif %}
 		
@@ -35,7 +39,7 @@
 			<input type = "submit" value = "Upload" name = "submit">&#160;&#160;
 			<input type = "reset" value = "Cancel" name = "reset">					
 		</form>
-		
+		<br>
 		{% endif %}		
 		
 	</div>	
