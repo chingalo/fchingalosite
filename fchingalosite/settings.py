@@ -118,6 +118,7 @@ CMS_TEMPLATES = (
 	('home.html', gettext('pages')),
 	('reportUpload.html', gettext('upload report ')),
 	('referenceUpload.html', gettext('upload reference ')),
+	('contactus.html', gettext('contact us page ')),
               
    )
 CMS_LANGUAGES = {
