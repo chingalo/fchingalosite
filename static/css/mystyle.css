@@ -3,19 +3,19 @@ background:;
 }
 
 #navigation_bar{
-max-width:70%;
+max-width:75%;
 margin:8px auto;
 border-radius:10px;
 
 }
 
 #breadcrumbs{
-max-width:70%;
+max-width:75%;
 margin:3px auto;
 border-radius:10px;
 }
 #contents_of_pages{
-max-width:70%;
+max-width:75%;
 margin:5px auto;
 }
 .page_contents{
@@ -23,7 +23,7 @@ padding:10px;
 font-family:;
 color:;
 text-align:justify;
-max-width:70%;
+max-width:75%;
 margin:0px auto;
 }
 .links_header{
@@ -58,7 +58,7 @@ font-style:bold;
 font-family:;
 }
 #footer{
-max-width:70%;
+max-width:75%;
 margin:0px auto;
 text-align: center;
 }
