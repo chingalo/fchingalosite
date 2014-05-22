@@ -102,10 +102,21 @@ def reportDownload(request):
 
 #search for  report file or detail	
 def reportSearch(request):
+	searchedReportTitle = ''
+	searchedReceiver = ''
+	
+	if  request.POST:
+		form = request.POST
+		#taking values  report_title    name_of_receiver  reciver  report
+		SearchList = form.getlist('reciver')
+		searchedReceiver= SearchList[0]
+		
+		SearchList = form.getlist('report')
+		searchedReportTitle = SearchList[0]
 	
 	
 	message = "search page for report, still under development"
-	context = {'message':message,}
+	context = {'message':message,'form':searchedReportTitle,}
 	return render(request, 'searchreport.html', context)	
 	
 	
