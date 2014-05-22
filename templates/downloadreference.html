@@ -10,6 +10,12 @@
 {% block page_contents %}
 <div class = "row-fluid">
 	<div class = "well">
+		{% for reference in referenceList %}{% if reference.reference_category == "Others" %}
+		{{reference.reference_category}}<br>
+		{% for file in fileList %}
+		{% if file.reference_title == reference %}{{file}}{% endif %}
+		{% endfor %}	
+		{% endif %}<br>{% endfor %}
 		<div class="tabbable">
 			<!---------- tabs----------->
 			<ul class ="nav nav-tabs">
@@ -21,16 +27,79 @@
 				<li class="span3"><a href="#tab4" data-toggle='tab'>Others</a></li>			
 			</ul>
 			<!-------------contents for tabs----------{% if forloop.counter == 1 %}{% endif %}-->
-			<div class="tab-content" style="text-align: left">
+			
+				<div class="tab-content" style="text-align: left">
 				<div class="tab-pane active" id="tab1">
 					<ul class="nav nav-tabs nav-stacked">
-						<!--- details in the tabs {{.file.url}}---->
+						{% for reference in referenceList %}{% if reference.reference_category == "Economy" %}
+						{{reference.reference_category}}<br>
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}{{file}}{% endif %}
+						{% endfor %}	
+						{% endif %}<br>{% endfor %}
+						<li style="padding: 3px">
 						
-						<li style="padding: 3px"><a href="">details<br><b><i class="icon-file icon-white"></i>file name</b>
-						<i class="icon-download-alt pull-right"></i></a></li>					
-					</ul>				
+						{{file}}	 
+							<a href="">details<br><b><i class="icon-file icon-white"></i>file name</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						
+						</li>
+					</ul>
 				</div>
-			</div>			
+										
+			
+			
+			
+				<div class="tab-pane" id="tab2">
+					<ul class="nav nav-tabs nav-stacked">
+						<!--- details in the tabs {{.file.url}}-->
+						{% for reference in referenceList %}{% if reference.reference_category == "Institution" %}
+						{{reference.reference_category}}<br>
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}{{file}}{% endif %}
+						{% endfor %}	
+						{% endif %}<br>{% endfor %}
+						<li style="padding: 3px"> 
+							<a href="">details<br><b><i class="icon-file icon-white"></i>file name</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						</li>											
+					</ul>
+				</div>			
+	
+			
+			
+				<div class="tab-pane" id="tab3">
+					<ul class="nav nav-tabs nav-stacked">
+						{% for reference in referenceList %}{% if reference.reference_category == "Social" %}
+						{{reference.reference_category}}<br>
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}{{file}}{% endif %}
+						{% endfor %}	
+						{% endif %}<br>{% endfor %}
+						<li style="padding: 3px"> 
+							<a href="">details<br><b><i class="icon-file icon-white"></i>file name</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						</li>												
+					</ul>
+				</div>										
+			
+
+				<div class="tab-pane" id="tab4">
+					<ul class="nav nav-tabs nav-stacked">
+						{% for reference in referenceList %}{% if reference.reference_category == "Others" %}
+						{{reference.reference_category}}<br>
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}{{file}}{% endif %}
+						{% endfor %}	
+						{% endif %}<br>{% endfor %}
+						<li style="padding: 3px"> 
+							<a href="">details<br><b><i class="icon-file icon-white"></i>file name</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						</li>									
+					</ul>
+				</div>						
+
+				</div>				
 		</div>				
 	</div>	
 </div>
