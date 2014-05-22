@@ -5,9 +5,25 @@
 {% block page_contents %}
 <div class = "row-fluid">
 	<div class = "well">
-		{{message}}
-		
-	</div>	
+	{{message}}	<hr>
+		<form action = "{% url 'referenceSearch'  %}" method = "POST" >
+			{% csrf_token %}
+			<table class="table table-striped">
+				<tr>
+					<td>
+					The Reference Title
+					</td>
+					<td>
+						<input type = "text" name = "reference" placeholder = "Reference title to be searched" />					
+					</td>				
+				</tr>			
+			</table><hr>
+			<div  style = "text-align:center; ">
+				<input type = "submit" value = "Search" name = "submit">&#160;&#160;
+				<input type = "reset" value = "Reset" name = "reset">					
+			</div>	
+		</form>	
+	  </div>	
 </div>
 {% endblock%}
 

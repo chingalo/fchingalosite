@@ -4,9 +4,33 @@
 <!-- contents for search report----- -->
 {% block page_contents %}
 <div class = "row-fluid">
-	<div class = "well">
-		{{message}}	
-				
+	<div class = "well">		
+		{{message}}	<hr>
+		<form action = "{% url 'reportSearch'  %}" method = "POST" >
+			{% csrf_token %}
+			<table class="table table-striped">
+				<tr>
+					<td>
+					The Reciver Of The Report
+					</td>
+					<td>
+						<input type = "text" name = "reciver" placeholder = "Report's receiver to be searched" />					
+					</td>				
+				</tr>
+				<tr>
+					<td>
+					The Report Title
+					</td>
+					<td>
+						<input type = "text" name = "report" placeholder = "Report to be searched" />					
+					</td>				
+				</tr>			
+			</table><hr>
+			<div  style = "text-align:center; ">
+				<input type = "submit" value = "Search" name = "submit">&#160;&#160;
+				<input type = "reset" value = "Reset" name = "reset">					
+			</div>	
+		</form>	
 	</div>	
 </div>
 {% endblock%}
@@ -16,3 +40,15 @@
 <li ><a href="{% url 'reportStep1'  %}">Upload Report</a></li>
 <li ><a href="{% url 'reportDownload'  %}">Download Report</a></li>
 {% endblock%}
+
+
+
+			{% csrf_token %}
+			<table class="table table-striped">
+				{{form.as_table}}			
+			</table>
+			<span class="pull-right">
+				<input type = "submit" value = "submit" name = "submit">&#160;&#160;
+				<input type = "reset" value = "Reset" name = "reset">			
+			</span>					
+		</form>

@@ -47,6 +47,7 @@ def referenceUploadStep2(request):
 			m = " sabed and redirect"
 			#save the form and shift to step two
 			form.save()
+			return HttpResponseRedirect('/reference/')
 			
 			
 		else:

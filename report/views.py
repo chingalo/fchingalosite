@@ -73,7 +73,7 @@ def reportUploadStep3(request):
 			m = "saved and redirect to home page"
 			#save the form and shift to step two
 			form.save()
-			
+			return HttpResponseRedirect('/report/')
 			
 		else:
 			m = "page returned"	
