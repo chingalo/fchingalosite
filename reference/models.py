@@ -7,12 +7,12 @@ class Reference(models.Model):
 		
 	#refernces categories
 	category_choice = (
-	('Finance','Finance'),
+	('Economy','Economy'),
 	('Institution','Institution'),
 	('Social','Social'),
 	('Others','Others'),	
 	)
-	reference_category = models.CharField(max_length=200, choices = category_choice , default = 'Finance')
+	reference_category = models.CharField(max_length=200, choices = category_choice , default = 'Economy')
 	reference_title_discription = models.TextField(max_length=2000, blank=True)
 		
 	def __unicode__(self):  # Python 3: def __str__(self):
