@@ -15,11 +15,11 @@
 					<ul class ="nav nav-tabs">
 						{% for receiver in receiverList %}
 						{% if forloop.counter == 1 %}
-						<li class="active span3">
+						<li class="active span4">
 							<a href="#{{receiver.id}}" data-toggle='tab'>{{receiver}}</a>
 						</li>
 						{% else %}
-						<li class="span3">
+						<li class="span4">
 							<a href="#{{receiver.id}}" data-toggle='tab'>{{receiver}}</a>
 						</li>
 						{% endif %}
