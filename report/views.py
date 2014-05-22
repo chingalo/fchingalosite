@@ -17,7 +17,7 @@ def reportUploadStep1(request):
 		if form.is_valid():
 			
 			#save the form and shift to step two
-			#form.save()
+			form.save()
 			form = reportStep2Form()
 			step = "step2"
 			
@@ -44,7 +44,7 @@ def reportUploadStep2(request):
 		#check if all field have been filled
 		if form.is_valid():
 			#save the form and shift to step two
-			#form.save()
+			form.save()
 			form = reportStep3Form()
 			step = "step3"
 			
@@ -72,7 +72,7 @@ def reportUploadStep3(request):
 		if form.is_valid():
 			m = "saved and redirect to home page"
 			#save the form and shift to step two
-			#form.save()
+			form.save()
 			
 			
 		else:

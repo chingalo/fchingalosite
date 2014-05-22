@@ -18,7 +18,7 @@ def referenceUploadStep1(request):
 		if form.is_valid():
 			m = " page saved and redirect "
 			#save the form and shift to step two
-			#form.save()
+			form.save()
 			form = referenceStep2Form()
 			step = "step2"
 			
@@ -46,7 +46,7 @@ def referenceUploadStep2(request):
 		if form.is_valid():
 			m = " sabed and redirect"
 			#save the form and shift to step two
-			#form.save()
+			form.save()
 			
 			
 		else:
