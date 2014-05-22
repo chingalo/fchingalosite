@@ -1,5 +1,7 @@
 from django.db import models
 from cms.models.pluginmodel import CMSPlugin
+from django.utils import timezone
+
 
 class Receiver_of_report(models.Model):
 	name_of_receiver = models.CharField(max_length=200)
@@ -15,7 +17,7 @@ class Details_of_Report(models.Model):
 	name_of_receiver = models.ForeignKey('Receiver_of_report', on_delete=models.CASCADE)
 	report_title = models.CharField(max_length=200)
 	description_of_report = models.TextField(max_length=200000, blank=True)
-	date_of_submission = models.DateField('date of submission of report')
+	date_of_submission = models.DateField('date of submission of report',default=timezone.now)
 	
 	def __unicode__(self):	# Python 3: def __str__(self):
 		return self.report_title

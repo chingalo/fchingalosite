@@ -1,5 +1,6 @@
 from django.db import models
 from cms.models.pluginmodel import CMSPlugin
+from django.utils import timezone
 
 class Reference(models.Model):
 	reference_title = models.CharField(max_length=200)
@@ -20,7 +21,7 @@ class Reference(models.Model):
 class Reference_file(models.Model):
 	reference_title = models.ForeignKey('Reference', on_delete=models.CASCADE)
 	name_of_file = models.CharField(max_length=200 )
-	date_of_upload_reference = models.DateField('date for upload file')
+	date_of_upload_reference = models.DateField('date for upload file',default=timezone.now)
 	reference_file = models.FileField(upload_to='references')
 	
 	def __unicode__(self): # Python 3: def __str__(self):
