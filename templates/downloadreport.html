@@ -32,37 +32,54 @@
 						
 						{% for receiver in receiverList %}
 						{% if forloop.counter == 1 %}
+						
 						<div class="tab-pane active" id="{{receiver.id}}">
 							<ul class="nav nav-tabs nav-stacked">
+								<p>
+									<a href="mailto:{{receiver.e_mail}}" style="color: #4D4D4D;"><i class = " icon-envelope"> </i>{{receiver.e_mail}}</a><br>
+										Mobile phone Number :{{receiver.mobile_phone_number}} <br>
+										Location ot Address : {{receiver.location_or_address}}							
+								</p>
+								<hr>
+									
 						<!--- details in the tabs {{.file.url}}---->
 								{% for report in  reportList%}						
 								{% if report.name_of_receiver == receiver %}
+								{{receiver}}-->{{report}}--><br>
 								{% for file in fileList %}
 								{% if file.report_title == report %}
-								{{receiver}}-->{{report}}-->{{file}}-->{{receiver.id}}<br>
+								file:{{file}}-->{{receiver}}<br>
+								<li style="padding: 3px"><a href=""><b><i class="icon-file icon-white"></i>file name</b>
+								<i class="icon-download-alt pull-right"></i></a></li>	
 								{% endif %}
 								{% endfor %}		
 								{% endif %}						
 								{% endfor %}
-								<li style="padding: 3px"> details<a href=""><b><i class="icon-file icon-white"></i>file name</b>
-								<i class="icon-download-alt pull-right"></i></a></li>					
+												
 							</ul>				
 						</div>
 						{% else %}
 						<div class="tab-pane" id="{{receiver.id}}">
 							<ul class="nav nav-tabs nav-stacked">
+								<p>
+									<a href="mailto:{{receiver.e_mail}}" style="color: #4D4D4D;"><i class = " icon-envelope"> </i>{{receiver.e_mail}}</a><br>
+										Mobile phone Number :{{receiver.mobile_phone_number}} <br>
+										Location ot Address : {{receiver.location_or_address}}							
+								</p>
+								<hr>
 						<!--- details in the tabs {{.file.url}}---->
-								{% for report in  reportList%}						
+								{% for report in  reportList%}								
 								{% if report.name_of_receiver == receiver %}
+								{{receiver}}-->{{report}}--><br>
 								{% for file in fileList %}
 								{% if file.report_title == report %}
-								{{receiver}}-->{{report}}-->{{file}}-->{{receiver.id}}<br>
+								file:{{file}}-->{{receiver}}<br>
+								<li style="padding: 3px"><a href=""><b><i class="icon-file icon-white"></i>file name</b>
+								<i class="icon-download-alt pull-right"></i></a></li>	
 								{% endif %}
 								{% endfor %}		
 								{% endif %}						
-								{% endfor %}
-								<li style="padding: 3px"> details<a href=""><b><i class="icon-file icon-white"></i>file name</b>
-								<i class="icon-download-alt pull-right"></i></a></li>					
+								{% endfor %}					
 							</ul>				
 						</div>
 						{% endif %}					
