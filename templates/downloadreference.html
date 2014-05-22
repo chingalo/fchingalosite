@@ -1,18 +1,39 @@
 {% extends "base.html" %}
 {% load cms_tags menu_tags %}
 
-<!---------------contents for download reference------------------>
-{% block page_contents %}
-<div class = "row-fluid">
-	<div class = "well">
-		{{message}}<br>{{referenceList}}<br>{{fileList}}
-		
-	</div>	
-</div>
-{% endblock%}
-
 {% block useful_links %}
 <li ><a href="/reference/">Reference</a></li>
 <li ><a href="{% url 'referenceStep1'  %}">Upload Reference</a></li>
 <li ><a href="{% url 'referenceSearch'  %}">Search Reference</a></li>
 {% endblock%}
+<!---------------contents for download reference------------------>
+{% block page_contents %}
+<div class = "row-fluid">
+	<div class = "well">
+		<div class="tabbable">
+			<!---------- tabs----------->
+			<ul class ="nav nav-tabs">
+				<li class="active span3">
+					<a href="#tab1" data-toggle='tab'>Economy</a>
+				</li>
+				<li class="span3"><a href="#tab2" data-toggle='tab'>Institution</a></li>
+				<li class="span3"><a href="#tab3" data-toggle='tab'>Social</a></li>
+				<li class="span3"><a href="#tab4" data-toggle='tab'>Others</a></li>			
+			</ul>
+			<!-------------contents for tabs----------{% if forloop.counter == 1 %}{% endif %}-->
+			<div class="tab-content" style="text-align: left">
+				<div class="tab-pane active" id="tab1">
+					<ul class="nav nav-tabs nav-stacked">
+						<!--- details in the tabs {{.file.url}}---->
+						
+						<li style="padding: 3px"><a href="">details<br><b><i class="icon-file icon-white"></i>file name</b>
+						<i class="icon-download-alt pull-right"></i></a></li>					
+					</ul>				
+				</div>
+			</div>			
+		</div>				
+	</div>	
+</div>
+{% endblock%}
+
+
