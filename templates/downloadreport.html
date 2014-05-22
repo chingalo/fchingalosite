@@ -5,10 +5,53 @@
 {% block page_contents %}
 <div class = "row-fluid">
 	<div class = "well">
-		{{message}}	<br>{{receiverList}}<br>
-		{{fileList}}<br>
-		{{reportList}}
-				
+		
+		{% for receiver in receiverList %}
+		{% for report in  reportList%}
+		{% if report.name_of_receiver == receiver %}
+		{% for file in fileList %}
+		{% if file.report_title == report %}
+		{{receiver}}-->{{report}}-->{{file}}<br>
+		{% endif %}
+		{% endfor %}		
+		{% endif %}
+		{% endfor %}		
+		{% endfor %}
+		<!--<i class="icon-file icon-white"></i><i class="icon-download-alt pull-right"></i>-->
+		<div class = "row-fluid">
+			<div class = "well">
+				<div class="tabbable">
+					<!---------- tabs----------->
+					<ul class ="nav nav-tabs">
+						{% for receiver in receiverList %}
+						{% if forloop.counter == 1 %}
+						<li class="active span3">
+							<a href="{{receiver.id}}" data-toggle='tab'>{{receiver}}</a>
+						</li>
+						{% else %}
+						<li class="span3">
+							<a href="{{receiver.id}}" data-toggle='tab'>{{receiver}}</a>
+						</li>
+						{% endif %}
+						{% endfor %}			
+					</ul>
+					<!-------------contents for tabs----------{% if forloop.counter == 1 %}{% endif %}-->
+					<div class="tab-content" style="text-align: left">
+						
+						<div class="tab-pane active well" id="tab1">
+							<ul class="nav nav-tabs nav-stacked">
+								<!--- details in the tabs {{.file.url}}---->
+								
+								<li style="padding: 3px"> 
+									<a href="">details<br><b><i class="icon-file icon-white"></i>file name</b>
+									<i class="icon-download-alt pull-right"></i></a>
+								</li>
+							</ul>				
+						</div>
+					</div>			
+				</div>				
+			</div>	
+		</div>				
 	</div>	
 </div>
 {% endblock%}
