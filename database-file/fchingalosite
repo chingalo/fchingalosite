@@ -4,7 +4,7 @@
 
 -- Dumped from database version 9.1.13
 -- Dumped by pg_dump version 9.1.13
--- Started on 2014-05-21 13:18:02 EAT
+-- Started on 2014-05-22 03:09:26 EAT
 
 SET statement_timeout = 0;
 SET client_encoding = 'UTF8';
@@ -2315,6 +2315,44 @@ SELECT pg_catalog.setval('auth_user_user_permissions_id_seq', 1, false);
 --
 
 COPY cms_cmsplugin (id, placeholder_id, parent_id, "position", language, plugin_type, creation_date, changed_date, level, lft, rght, tree_id) FROM stdin;
+1	1	\N	0	en	LinkPlugin	2014-05-22 02:32:41.801965+03	2014-05-22 02:32:54.070336+03	0	1	2	1
+2	2	\N	0	en	LinkPlugin	2014-05-22 02:32:58.937914+03	2014-05-22 02:33:08.69695+03	0	1	2	2
+3	3	\N	0	en	LinkPlugin	2014-05-22 02:33:11.202101+03	2014-05-22 02:33:55.85779+03	0	1	2	3
+4	4	\N	0	en	LinkPlugin	2014-05-22 02:34:02.24521+03	2014-05-22 02:34:18.229181+03	0	1	2	4
+9	7	\N	0	en	SlideshowPluginHome	2014-05-22 02:35:01.014078+03	2014-05-22 02:35:02.562631+03	0	1	2	9
+11	6	\N	0	en	TextPlugin	2014-05-22 02:36:34.385101+03	2014-05-22 02:36:44.941282+03	0	1	2	10
+12	43	\N	0	en	LinkPlugin	2014-05-22 02:32:41.801965+03	2014-05-22 02:36:51.240052+03	0	1	2	11
+13	44	\N	0	en	LinkPlugin	2014-05-22 02:32:58.937914+03	2014-05-22 02:36:51.274365+03	0	1	2	12
+14	45	\N	0	en	LinkPlugin	2014-05-22 02:33:11.202101+03	2014-05-22 02:36:51.298423+03	0	1	2	13
+15	46	\N	0	en	LinkPlugin	2014-05-22 02:34:02.24521+03	2014-05-22 02:36:51.32476+03	0	1	2	14
+16	48	\N	0	en	TextPlugin	2014-05-22 02:36:34.385101+03	2014-05-22 02:36:51.376087+03	0	1	2	15
+17	49	\N	0	en	SlideshowPluginHome	2014-05-22 02:35:01.014078+03	2014-05-22 02:36:51.401116+03	0	1	2	16
+18	8	\N	0	en	LinkPlugin	2014-05-22 02:37:31.539134+03	2014-05-22 02:37:47.750766+03	0	1	2	17
+19	9	\N	0	en	LinkPlugin	2014-05-22 02:37:49.761307+03	2014-05-22 02:38:06.323631+03	0	1	2	18
+20	10	\N	0	en	LinkPlugin	2014-05-22 02:38:08.715887+03	2014-05-22 02:38:21.539926+03	0	1	2	19
+21	14	\N	0	en	SlideshowPluginReference	2014-05-22 02:38:34.092661+03	2014-05-22 02:38:37.985871+03	0	1	2	20
+22	29	\N	0	en	LinkPlugin	2014-05-22 02:37:31.539134+03	2014-05-22 02:38:48.935766+03	0	1	2	21
+23	30	\N	0	en	LinkPlugin	2014-05-22 02:37:49.761307+03	2014-05-22 02:38:48.967799+03	0	1	2	22
+24	31	\N	0	en	LinkPlugin	2014-05-22 02:38:08.715887+03	2014-05-22 02:38:48.993984+03	0	1	2	23
+25	35	\N	0	en	SlideshowPluginReference	2014-05-22 02:38:34.092661+03	2014-05-22 02:38:49.04878+03	0	1	2	24
+26	15	\N	0	en	LinkPlugin	2014-05-22 02:39:59.75991+03	2014-05-22 02:40:26.766622+03	0	1	2	25
+27	16	\N	0	en	LinkPlugin	2014-05-22 02:40:30.128568+03	2014-05-22 02:40:41.778272+03	0	1	2	26
+28	17	\N	0	en	LinkPlugin	2014-05-22 02:40:49.356248+03	2014-05-22 02:41:00.541154+03	0	1	2	27
+29	21	\N	0	en	SlideshowPluginReport	2014-05-22 02:41:09.152078+03	2014-05-22 02:41:10.768927+03	0	1	2	28
+30	50	\N	0	en	LinkPlugin	2014-05-22 02:39:59.75991+03	2014-05-22 02:41:15.787185+03	0	1	2	29
+31	51	\N	0	en	LinkPlugin	2014-05-22 02:40:30.128568+03	2014-05-22 02:41:15.828607+03	0	1	2	30
+32	52	\N	0	en	LinkPlugin	2014-05-22 02:40:49.356248+03	2014-05-22 02:41:15.851588+03	0	1	2	31
+33	56	\N	0	en	SlideshowPluginReport	2014-05-22 02:41:09.152078+03	2014-05-22 02:41:15.89552+03	0	1	2	32
+34	99	\N	0	en	LinkPlugin	2014-05-22 02:42:17.60578+03	2014-05-22 02:42:30.492028+03	0	1	2	33
+35	100	\N	0	en	LinkPlugin	2014-05-22 02:42:32.593057+03	2014-05-22 02:42:41.386613+03	0	1	2	34
+36	101	\N	0	en	LinkPlugin	2014-05-22 02:42:43.299842+03	2014-05-22 02:42:52.99472+03	0	1	2	35
+37	102	\N	0	en	LinkPlugin	2014-05-22 02:42:54.817922+03	2014-05-22 02:43:05.814509+03	0	1	2	36
+38	105	\N	0	en	SlideshowPluginSearch	2014-05-22 02:43:14.901605+03	2014-05-22 02:43:16.119296+03	0	1	2	37
+44	106	\N	0	en	LinkPlugin	2014-05-22 02:42:17.60578+03	2014-05-22 02:43:35.638965+03	0	1	2	38
+45	107	\N	0	en	LinkPlugin	2014-05-22 02:42:32.593057+03	2014-05-22 02:43:35.706739+03	0	1	2	39
+46	108	\N	0	en	LinkPlugin	2014-05-22 02:42:43.299842+03	2014-05-22 02:43:35.771057+03	0	1	2	40
+47	109	\N	0	en	LinkPlugin	2014-05-22 02:42:54.817922+03	2014-05-22 02:43:35.836106+03	0	1	2	41
+48	112	\N	0	en	SlideshowPluginSearch	2014-05-22 02:43:14.901605+03	2014-05-22 02:43:35.913413+03	0	1	2	42
 \.
 
 
@@ -2324,7 +2362,7 @@ COPY cms_cmsplugin (id, placeholder_id, parent_id, "position", language, plugin_
 -- Name: cms_cmsplugin_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('cms_cmsplugin_id_seq', 1, false);
+SELECT pg_catalog.setval('cms_cmsplugin_id_seq', 48, true);
 
 
 --
@@ -2372,18 +2410,28 @@ SELECT pg_catalog.setval('cms_globalpagepermission_sites_id_seq', 1, false);
 --
 
 COPY cms_page (id, created_by, changed_by, parent_id, creation_date, changed_date, publication_date, publication_end_date, in_navigation, soft_root, reverse_id, navigation_extenders, published, template, site_id, login_required, limit_visibility_in_menu, level, lft, rght, tree_id, publisher_is_draft, publisher_public_id, publisher_state) FROM stdin;
-12	admin	admin	\N	2014-05-21 13:16:43.198139+03	2014-05-21 13:16:43.198211+03	2014-05-21 13:16:38.189507+03	\N	t	f	\N		t	contactus.html	1	f	\N	0	1	2	8	f	4	0
-4	admin	admin	\N	2014-05-21 13:10:51.380841+03	2014-05-21 13:16:43.41708+03	2014-05-21 13:16:38.405704+03	\N	t	f	\N		t	contactus.html	1	f	\N	0	1	2	4	t	12	0
-1	admin	admin	\N	2014-05-21 13:09:39.893753+03	2014-05-21 13:13:57.930535+03	2014-05-21 13:13:52.924515+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	2	1	t	8	0
-8	admin	admin	\N	2014-05-21 13:13:57.611854+03	2014-05-21 13:13:57.611908+03	2014-05-21 13:13:52.603766+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	2	5	f	1	0
-6	admin	admin	\N	2014-05-21 13:13:30.708869+03	2014-05-21 13:14:35.039443+03	2014-05-21 13:13:26.22748+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	4	6	f	2	0
-2	admin	admin	\N	2014-05-21 13:10:02.263498+03	2014-05-21 13:14:35.168968+03	2014-05-21 13:13:26.22748+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	4	2	t	6	0
-7	admin	admin	6	2014-05-21 13:13:31.38058+03	2014-05-21 13:14:36.522322+03	2014-05-21 13:13:23.362326+03	\N	t	f	\N		t	home.html	1	f	\N	1	2	3	6	f	5	0
+14	admin	admin	2	2014-05-22 01:10:26.774459+03	2014-05-22 01:37:31.563914+03	2014-05-22 01:11:50.972178+03	\N	t	f	\N		t	downloadreference.html	1	f	\N	1	4	5	2	t	17	0
+15	admin	admin	3	2014-05-22 01:11:26.895188+03	2014-05-22 01:37:59.087031+03	2014-05-22 01:11:49.523113+03	\N	t	f	\N		t	downloadreport.html	1	f	\N	1	4	5	3	t	16	0
+12	admin	admin	\N	2014-05-21 13:16:43.198139+03	2014-05-21 13:16:43.198211+03	2014-05-21 13:16:38.189507+03	\N	t	f	\N		t	contactus.html	1	f	\N	0	1	2	10	f	4	0
+18	admin	admin	2	2014-05-22 01:13:59.172561+03	2014-05-22 01:52:10.457762+03	2014-05-22 01:14:40.987487+03	\N	t	f	\N		t	searchreference.html	1	f	\N	1	6	7	2	t	19	0
+1	admin	admin	\N	2014-05-21 13:09:39.893753+03	2014-05-22 02:36:51.435227+03	2014-05-21 13:13:52.924515+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	2	1	t	8	0
+20	admin	admin	3	2014-05-22 01:15:14.348864+03	2014-05-22 02:25:51.17687+03	2014-05-22 01:15:40.446986+03	\N	t	f	\N		t	searchreport.html	1	f	\N	1	6	7	3	t	21	0
+2	admin	admin	\N	2014-05-21 13:10:02.263498+03	2014-05-22 02:38:49.070485+03	2014-05-21 13:13:26.22748+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	8	2	t	6	0
+3	admin	admin	\N	2014-05-21 13:10:15.683499+03	2014-05-22 02:41:15.919004+03	2014-05-21 13:16:32.81488+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	8	3	t	10	0
+17	admin	admin	6	2014-05-22 01:11:55.880561+03	2014-05-22 01:37:31.403601+03	2014-05-22 01:11:50.972178+03	\N	t	f	\N		t	downloadreference.html	1	f	\N	1	4	5	7	f	14	0
+16	admin	admin	10	2014-05-22 01:11:54.439069+03	2014-05-22 01:37:59.036711+03	2014-05-22 01:11:49.523113+03	\N	t	f	\N		t	downloadreport.html	1	f	\N	1	4	5	8	f	15	0
 5	admin	admin	2	2014-05-21 13:12:59.809693+03	2014-05-21 13:14:36.660552+03	2014-05-21 13:13:23.362326+03	\N	t	f	\N		t	home.html	1	f	\N	1	2	3	2	t	7	0
-3	admin	admin	\N	2014-05-21 13:10:15.683499+03	2014-05-21 13:16:37.826523+03	2014-05-21 13:16:32.81488+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	4	3	t	10	0
-10	admin	admin	\N	2014-05-21 13:16:37.494956+03	2014-05-21 13:16:37.495027+03	2014-05-21 13:16:32.485647+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	4	7	f	3	0
-11	admin	admin	10	2014-05-21 13:16:39.309936+03	2014-05-21 13:16:39.309991+03	2014-05-21 13:16:34.290045+03	\N	t	f	\N		t	reportUpload.html	1	f	\N	1	2	3	7	f	9	0
+4	admin	admin	\N	2014-05-21 13:10:51.380841+03	2014-05-21 13:16:43.41708+03	2014-05-21 13:16:38.405704+03	\N	t	f	\N		t	contactus.html	1	f	\N	0	1	2	5	t	12	0
+19	admin	admin	6	2014-05-22 01:14:45.909027+03	2014-05-22 01:52:10.275574+03	2014-05-22 01:14:40.987487+03	\N	t	f	\N		t	searchreference.html	1	f	\N	1	6	7	7	f	18	0
+8	admin	admin	\N	2014-05-21 13:13:57.611854+03	2014-05-22 02:36:51.045208+03	2014-05-21 13:13:52.924515+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	2	6	f	1	0
+21	admin	admin	10	2014-05-22 01:15:45.374267+03	2014-05-22 02:25:51.029028+03	2014-05-22 01:15:40.446986+03	\N	t	f	\N		t	searchreport.html	1	f	\N	1	6	7	8	f	20	0
 9	admin	admin	3	2014-05-21 13:16:10.523932+03	2014-05-21 13:16:39.397617+03	2014-05-21 13:16:34.386368+03	\N	t	f	\N		t	reportUpload.html	1	f	\N	1	2	3	3	t	11	0
+6	admin	admin	\N	2014-05-21 13:13:30.708869+03	2014-05-22 02:38:48.847836+03	2014-05-21 13:13:26.22748+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	8	7	f	2	0
+7	admin	admin	6	2014-05-21 13:13:31.38058+03	2014-05-21 13:14:36.522322+03	2014-05-21 13:13:23.362326+03	\N	t	f	\N		t	home.html	1	f	\N	1	2	3	7	f	5	0
+10	admin	admin	\N	2014-05-21 13:16:37.494956+03	2014-05-22 02:41:15.715474+03	2014-05-21 13:16:32.81488+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	8	8	f	3	0
+11	admin	admin	10	2014-05-21 13:16:39.309936+03	2014-05-21 13:16:39.309991+03	2014-05-21 13:16:34.290045+03	\N	t	f	\N		t	reportUpload.html	1	f	\N	1	2	3	8	f	9	0
+23	admin	admin	\N	2014-05-22 02:43:21.786389+03	2014-05-22 02:43:35.421296+03	2014-05-22 02:43:17.098171+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	2	9	f	22	0
+22	admin	admin	\N	2014-05-22 02:41:54.330526+03	2014-05-22 02:43:35.974837+03	2014-05-22 02:43:17.098171+03	\N	t	f	\N		t	home.html	1	f	\N	0	1	2	4	t	23	0
 \.
 
 
@@ -2393,7 +2441,7 @@ COPY cms_page (id, created_by, changed_by, parent_id, creation_date, changed_dat
 -- Name: cms_page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('cms_page_id_seq', 12, true);
+SELECT pg_catalog.setval('cms_page_id_seq', 23, true);
 
 
 --
@@ -2459,6 +2507,62 @@ COPY cms_page_placeholders (id, page_id, placeholder_id) FROM stdin;
 54	10	54
 55	10	55
 56	10	56
+57	14	57
+58	14	58
+59	14	59
+60	14	60
+61	14	61
+62	14	62
+63	14	63
+64	17	64
+65	17	65
+66	17	66
+67	17	67
+68	17	68
+69	17	69
+70	17	70
+71	20	71
+72	20	72
+73	20	73
+74	20	74
+75	20	75
+76	20	76
+77	20	77
+78	21	78
+79	21	79
+80	21	80
+81	21	81
+82	21	82
+83	21	83
+84	21	84
+85	18	85
+86	18	86
+87	18	87
+88	18	88
+89	18	89
+90	18	90
+91	18	91
+92	19	92
+93	19	93
+94	19	94
+95	19	95
+96	19	96
+97	19	97
+98	19	98
+99	22	99
+100	22	100
+101	22	101
+102	22	102
+103	22	103
+104	22	104
+105	22	105
+106	23	106
+107	23	107
+108	23	108
+109	23	109
+110	23	110
+111	23	111
+112	23	112
 \.
 
 
@@ -2468,7 +2572,7 @@ COPY cms_page_placeholders (id, page_id, placeholder_id) FROM stdin;
 -- Name: cms_page_placeholders_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('cms_page_placeholders_id_seq', 56, true);
+SELECT pg_catalog.setval('cms_page_placeholders_id_seq', 112, true);
 
 
 --
@@ -2487,7 +2591,7 @@ COPY cms_pagemoderatorstate (id, page_id, user_id, created, action, message) FRO
 -- Name: cms_pagemoderatorstate_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('cms_pagemoderatorstate_id_seq', 6, true);
+SELECT pg_catalog.setval('cms_pagemoderatorstate_id_seq', 32, true);
 
 
 --
@@ -2592,6 +2696,62 @@ COPY cms_placeholder (id, slot, default_width) FROM stdin;
 54	useful_link5	\N
 55	website_introduction	\N
 56	slideshow_homepages	\N
+57	useful_link1	\N
+58	useful_link2	\N
+59	useful_link3	\N
+60	useful_link4	\N
+61	useful_link5	\N
+62	website_introduction	\N
+63	slideshow_homepages	\N
+64	useful_link1	\N
+65	useful_link2	\N
+66	useful_link3	\N
+67	useful_link4	\N
+68	useful_link5	\N
+69	website_introduction	\N
+70	slideshow_homepages	\N
+71	useful_link1	\N
+72	useful_link2	\N
+73	useful_link3	\N
+74	useful_link4	\N
+75	useful_link5	\N
+76	website_introduction	\N
+77	slideshow_homepages	\N
+78	useful_link1	\N
+79	useful_link2	\N
+80	useful_link3	\N
+81	useful_link4	\N
+82	useful_link5	\N
+83	website_introduction	\N
+84	slideshow_homepages	\N
+85	useful_link1	\N
+86	useful_link2	\N
+87	useful_link3	\N
+88	useful_link4	\N
+89	useful_link5	\N
+90	website_introduction	\N
+91	slideshow_homepages	\N
+92	useful_link1	\N
+93	useful_link2	\N
+94	useful_link3	\N
+95	useful_link4	\N
+96	useful_link5	\N
+97	website_introduction	\N
+98	slideshow_homepages	\N
+99	useful_link1	\N
+100	useful_link2	\N
+101	useful_link3	\N
+102	useful_link4	\N
+103	useful_link5	\N
+104	website_introduction	\N
+105	slideshow_homepages	\N
+106	useful_link1	\N
+107	useful_link2	\N
+108	useful_link3	\N
+109	useful_link4	\N
+110	useful_link5	\N
+111	website_introduction	\N
+112	slideshow_homepages	\N
 \.
 
 
@@ -2601,7 +2761,7 @@ COPY cms_placeholder (id, slot, default_width) FROM stdin;
 -- Name: cms_placeholder_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('cms_placeholder_id_seq', 56, true);
+SELECT pg_catalog.setval('cms_placeholder_id_seq', 112, true);
 
 
 --
@@ -2630,18 +2790,28 @@ SELECT pg_catalog.setval('cms_redirects_cmsredirect_id_seq', 1, false);
 --
 
 COPY cms_title (id, language, title, menu_title, slug, path, has_url_overwrite, application_urls, redirect, meta_description, meta_keywords, page_title, page_id, creation_date) FROM stdin;
-3	en	Report	\N	report	report	f	\N	\N	\N	\N	\N	3	2014-05-21 13:10:15.741613+03
 4	en	Contact Us	\N	contact-us	contact-us	f	\N	\N	\N	\N	\N	4	2014-05-21 13:10:51.405381+03
-2	en	Reference	\N	reference		f	\N	\N	\N	\N	\N	2	2014-05-21 13:10:02.339229+03
-5	en	Upload Reference		referenceupload	referenceupload	f						5	2014-05-21 13:12:59.87063+03
-8	en	Home	\N	home		f	\N	\N	\N	\N	\N	8	2014-05-21 13:09:39.948012+03
-1	en	Home	\N	home		f	\N	\N	\N	\N	\N	1	2014-05-21 13:09:39.948012+03
-6	en	Reference	\N	reference	reference	f	\N	\N	\N	\N	\N	6	2014-05-21 13:10:02.339229+03
 7	en	Upload Reference		referenceupload	reference/referenceupload	f						7	2014-05-21 13:12:59.87063+03
 9	en	Upload Report		reportupload	report/reportupload	f						9	2014-05-21 13:16:10.556349+03
-10	en	Report	\N	report	report	f	\N	\N	\N	\N	\N	10	2014-05-21 13:10:15.741613+03
 11	en	Upload Report		reportupload	report/reportupload	f						11	2014-05-21 13:16:10.556349+03
 12	en	Contact Us	\N	contact-us	contact-us	f	\N	\N	\N	\N	\N	12	2014-05-21 13:10:51.405381+03
+15	en	Download Report		download	report/download	f						15	2014-05-22 01:11:26.916403+03
+17	en	Download Reference		download	reference/download	f						17	2014-05-22 01:10:26.799433+03
+16	en	Download Report		download	report/download	f						16	2014-05-22 01:11:26.916403+03
+19	en	Search Reference		search	reference/search	f						19	2014-05-22 01:13:59.204714+03
+20	en	Search Report		search	report/search	f						20	2014-05-22 01:15:14.379923+03
+21	en	Search Report		search	report/search	f						21	2014-05-22 01:15:14.379923+03
+1	en	Home		home		f						1	2014-05-21 13:09:39.948012+03
+8	en	Home		home		f						8	2014-05-21 13:09:39.948012+03
+5	en	Upload Reference		referenceupload	reference/referenceupload	f						5	2014-05-21 13:12:59.87063+03
+14	en	Download Reference		download	reference/download	f						14	2014-05-22 01:10:26.799433+03
+18	en	Search Reference		search	reference/search	f						18	2014-05-22 01:13:59.204714+03
+2	en	Reference		reference	reference	f						2	2014-05-21 13:10:02.339229+03
+6	en	Reference		reference	reference	f						6	2014-05-21 13:10:02.339229+03
+3	en	Report		report	report	f						3	2014-05-21 13:10:15.741613+03
+10	en	Report		report	report	f						10	2014-05-21 13:10:15.741613+03
+22	en	Search		search	search	f						22	2014-05-22 02:41:54.390282+03
+23	en	Search		search	search	f						23	2014-05-22 02:41:54.390282+03
 \.
 
 
@@ -2651,7 +2821,7 @@ COPY cms_title (id, language, title, menu_title, slug, path, has_url_overwrite, 
 -- Name: cms_title_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('cms_title_id_seq', 12, true);
+SELECT pg_catalog.setval('cms_title_id_seq', 23, true);
 
 
 --
@@ -2701,6 +2871,34 @@ COPY cmsplugin_googlemap (cmsplugin_ptr_id, title, address, zipcode, city, conte
 --
 
 COPY cmsplugin_link (cmsplugin_ptr_id, name, url, page_link_id, mailto, target) FROM stdin;
+1	Reference		2		
+2	Report		3		
+3	Search Report		20		
+4	Search Reference		18		
+12	Reference		2		
+13	Report		3		
+14	Search Report		20		
+15	Search Reference		18		
+18	Upload Refernce		5		
+19	Download Reference		14		
+20	Search Reference		18		
+22	Upload Refernce		5		
+23	Download Reference		14		
+24	Search Reference		18		
+26	Upload Report		9		
+27	Download Report		15		
+28	Search Report		20		
+30	Upload Report		9		
+31	Download Report		15		
+32	Search Report		20		
+34	Search Reference		18		
+35	Search Report		20		
+36	Reference		2		
+37	Report		3		
+44	Search Reference		18		
+45	Search Report		20		
+46	Reference		2		
+47	Report		3		
 \.
 
 
@@ -2731,6 +2929,8 @@ COPY cmsplugin_servicesplugin (cmsplugin_ptr_id, title) FROM stdin;
 --
 
 COPY cmsplugin_slideshowhomeplugin (cmsplugin_ptr_id, title) FROM stdin;
+9	home page slide show
+17	home page slide show
 \.
 
 
@@ -2741,6 +2941,8 @@ COPY cmsplugin_slideshowhomeplugin (cmsplugin_ptr_id, title) FROM stdin;
 --
 
 COPY cmsplugin_slideshowreferenceplugin (cmsplugin_ptr_id, title) FROM stdin;
+21	reference page slide show
+25	reference page slide show
 \.
 
 
@@ -2751,6 +2953,8 @@ COPY cmsplugin_slideshowreferenceplugin (cmsplugin_ptr_id, title) FROM stdin;
 --
 
 COPY cmsplugin_slideshowreportplugin (cmsplugin_ptr_id, title) FROM stdin;
+29	report page slide show
+33	report page slide show
 \.
 
 
@@ -2761,6 +2965,8 @@ COPY cmsplugin_slideshowreportplugin (cmsplugin_ptr_id, title) FROM stdin;
 --
 
 COPY cmsplugin_slideshowsearchplugin (cmsplugin_ptr_id, title) FROM stdin;
+38	search page slide show
+48	search page slide show
 \.
 
 
@@ -2791,6 +2997,8 @@ COPY cmsplugin_teaser (cmsplugin_ptr_id, title, image, page_link_id, url, descri
 --
 
 COPY cmsplugin_text (cmsplugin_ptr_id, body) FROM stdin;
+11	<p>Library based website for consultancy institution.\nIt is python powered Django-cms website,\nIt aims to store, organize and download all references and reports for consultancy institution.\nReferences are organized depending on their categories including Finance, Institution, Social and others.\nReports are organized depend on to whom the report have been sent.</p>
+16	<p>Library based website for consultancy institution.\nIt is python powered Django-cms website,\nIt aims to store, organize and download all references and reports for consultancy institution.\nReferences are organized depending on their categories including Finance, Institution, Social and others.\nReports are organized depend on to whom the report have been sent.</p>
 \.
 
 
@@ -2853,6 +3061,38 @@ COPY django_admin_log (id, action_time, user_id, content_type_id, object_id, obj
 20	2014-05-21 13:16:37.874483+03	1	10	3	Report	2	
 21	2014-05-21 13:16:39.430999+03	1	10	9	Upload Report	2	
 22	2014-05-21 13:16:43.470307+03	1	10	4	Contact Us	2	
+23	2014-05-22 01:08:56.104758+03	1	10	13	donloaderefernce	1	
+24	2014-05-22 01:09:55.853144+03	1	10	13	donloaderefernce	2	Changed title and slug.
+25	2014-05-22 01:10:01.918723+03	1	10	13	donloadRefernce	3	
+26	2014-05-22 01:10:26.813098+03	1	10	14	download	1	
+27	2014-05-22 01:10:59.665398+03	1	10	14	download	2	Changed title.
+28	2014-05-22 01:11:26.927166+03	1	10	15	download	1	
+29	2014-05-22 01:11:44.219566+03	1	10	15	download	2	Changed title.
+30	2014-05-22 01:11:54.57079+03	1	10	15	Download Report	2	
+31	2014-05-22 01:11:56.034893+03	1	10	14	Download Reference	2	
+32	2014-05-22 01:13:59.217508+03	1	10	18	search	1	
+33	2014-05-22 01:14:34.756126+03	1	10	18	search	2	Changed title.
+34	2014-05-22 01:14:46.041201+03	1	10	18	Search Reference	2	
+35	2014-05-22 01:15:14.395727+03	1	10	20	search	1	
+36	2014-05-22 01:15:41.336996+03	1	10	20	search	2	Changed title.
+37	2014-05-22 01:15:45.484338+03	1	10	20	Search Report	2	
+38	2014-05-22 01:35:16.036491+03	1	10	15	Download Report	2	Changed template.
+39	2014-05-22 01:37:05.352182+03	1	10	14	Download Reference	2	Changed template.
+40	2014-05-22 01:51:50.98889+03	1	10	20	Search Report	2	Changed template.
+41	2014-05-22 01:51:55.223937+03	1	10	20	Search Report	2	
+42	2014-05-22 01:51:56.437583+03	1	10	20	Search Report	2	
+43	2014-05-22 01:52:08.231215+03	1	10	18	Search Reference	2	Changed template.
+44	2014-05-22 02:25:43.860036+03	1	10	20	Search Report	2	No fields changed.
+45	2014-05-22 02:25:49.891291+03	1	10	20	Search Report	2	
+46	2014-05-22 02:25:51.402284+03	1	10	20	Search Report	2	
+47	2014-05-22 02:34:22.842022+03	1	10	1	Home	2	No fields changed.
+48	2014-05-22 02:36:47.896907+03	1	10	1	Home	2	No fields changed.
+49	2014-05-22 02:38:46.801236+03	1	10	2	Reference	2	No fields changed.
+50	2014-05-22 02:41:13.886265+03	1	10	3	Report	2	No fields changed.
+51	2014-05-22 02:41:54.413153+03	1	10	22	Search	1	
+52	2014-05-22 02:43:19.632043+03	1	10	22	Search	2	No fields changed.
+53	2014-05-22 02:43:32.979544+03	1	10	22	Search	2	
+54	2014-05-22 02:43:36.019779+03	1	10	22	Search	2	
 \.
 
 
@@ -2862,7 +3102,7 @@ COPY django_admin_log (id, action_time, user_id, content_type_id, object_id, obj
 -- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('django_admin_log_id_seq', 22, true);
+SELECT pg_catalog.setval('django_admin_log_id_seq', 54, true);
 
 
 --
@@ -2938,7 +3178,7 @@ SELECT pg_catalog.setval('django_content_type_id_seq', 47, true);
 --
 
 COPY django_session (session_key, session_data, expire_date) FROM stdin;
-ibjh4v26mcpsagxx570aci7figged6a5	Zjg1Nzg4ZDY2ZGRkNThmNjYwNWNjYTE0NTk3NWUxYjllODZkZGVkZTqAAn1xAShVDmNtc19hZG1pbl9zaXRlSwFVCV9tZXNzYWdlc1SoBgAAW1siX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiSG9tZVwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJSZWZlcmVuY2VcIiB3YXMgYWRkZWQgc3VjY2Vzc2Z1bGx5LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiUmVwb3J0XCIgd2FzIGFkZGVkIHN1Y2Nlc3NmdWxseS4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIkNvbnRhY3QgVXNcIiB3YXMgYWRkZWQgc3VjY2Vzc2Z1bGx5LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiUmVmZXJlbmNlVXBsb2FkXCIgd2FzIGFkZGVkIHN1Y2Nlc3NmdWxseS4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlJlZmVyZW5jZVVwbG9hZFwiIHdhcyBjaGFuZ2VkIHN1Y2Nlc3NmdWxseS4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlVwbG9hZCBSZWZlcmVuY2VcIiB3YXMgc3VjY2Vzc2Z1bGx5IHB1Ymxpc2hlZCJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiUmVmZXJlbmNlXCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlJlZmVyZW5jZVwiIHdhcyBzdWNjZXNzZnVsbHkgdW5wdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlVwbG9hZCBSZWZlcmVuY2VcIiB3YXMgc3VjY2Vzc2Z1bGx5IHVucHVibGlzaGVkIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJIb21lXCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlJlZmVyZW5jZVwiIHdhcyBzdWNjZXNzZnVsbHkgcHVibGlzaGVkIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJVcGxvYWQgUmVmZXJlbmNlXCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlVwbG9hZCBSZWZlcmVuY2VcIiB3YXMgc3VjY2Vzc2Z1bGx5IHVucHVibGlzaGVkIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJSZWZlcmVuY2VcIiB3YXMgc3VjY2Vzc2Z1bGx5IHVucHVibGlzaGVkIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJSZWZlcmVuY2VcIiB3YXMgc3VjY2Vzc2Z1bGx5IHB1Ymxpc2hlZCJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiVXBsb2FkIFJlZmVyZW5jZVwiIHdhcyBzdWNjZXNzZnVsbHkgcHVibGlzaGVkIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJyZXBvcnRVcGxvYWRcIiB3YXMgYWRkZWQgc3VjY2Vzc2Z1bGx5LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwicmVwb3J0VXBsb2FkXCIgd2FzIGNoYW5nZWQgc3VjY2Vzc2Z1bGx5LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiUmVwb3J0XCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlVwbG9hZCBSZXBvcnRcIiB3YXMgc3VjY2Vzc2Z1bGx5IHB1Ymxpc2hlZCJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiQ29udGFjdCBVc1wiIHdhcyBzdWNjZXNzZnVsbHkgcHVibGlzaGVkIl1dVQ1fYXV0aF91c2VyX2lkSwFVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmR1Lg==	2014-06-04 13:16:43.518178+03
+ibjh4v26mcpsagxx570aci7figged6a5	MzkxYTRmYTJhM2VkZmMxNmMwOTk3NjkyNTZmMWJkM2Q4MmYxZjcwZjqAAn1xAShVDmNtc19hZG1pbl9zaXRlSwFVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmRVDV9hdXRoX3VzZXJfaWRLAVUJX21lc3NhZ2VzVNQbAABbWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJIb21lXCIgd2FzIGFkZGVkIHN1Y2Nlc3NmdWxseS4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlJlZmVyZW5jZVwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJSZXBvcnRcIiB3YXMgYWRkZWQgc3VjY2Vzc2Z1bGx5LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiQ29udGFjdCBVc1wiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJSZWZlcmVuY2VVcGxvYWRcIiB3YXMgYWRkZWQgc3VjY2Vzc2Z1bGx5LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiUmVmZXJlbmNlVXBsb2FkXCIgd2FzIGNoYW5nZWQgc3VjY2Vzc2Z1bGx5LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiVXBsb2FkIFJlZmVyZW5jZVwiIHdhcyBzdWNjZXNzZnVsbHkgcHVibGlzaGVkIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJSZWZlcmVuY2VcIiB3YXMgc3VjY2Vzc2Z1bGx5IHB1Ymxpc2hlZCJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiUmVmZXJlbmNlXCIgd2FzIHN1Y2Nlc3NmdWxseSB1bnB1Ymxpc2hlZCJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiVXBsb2FkIFJlZmVyZW5jZVwiIHdhcyBzdWNjZXNzZnVsbHkgdW5wdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIkhvbWVcIiB3YXMgc3VjY2Vzc2Z1bGx5IHB1Ymxpc2hlZCJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiUmVmZXJlbmNlXCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlVwbG9hZCBSZWZlcmVuY2VcIiB3YXMgc3VjY2Vzc2Z1bGx5IHB1Ymxpc2hlZCJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiVXBsb2FkIFJlZmVyZW5jZVwiIHdhcyBzdWNjZXNzZnVsbHkgdW5wdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlJlZmVyZW5jZVwiIHdhcyBzdWNjZXNzZnVsbHkgdW5wdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlJlZmVyZW5jZVwiIHdhcyBzdWNjZXNzZnVsbHkgcHVibGlzaGVkIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJVcGxvYWQgUmVmZXJlbmNlXCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcInJlcG9ydFVwbG9hZFwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJyZXBvcnRVcGxvYWRcIiB3YXMgY2hhbmdlZCBzdWNjZXNzZnVsbHkuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJSZXBvcnRcIiB3YXMgc3VjY2Vzc2Z1bGx5IHB1Ymxpc2hlZCJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiVXBsb2FkIFJlcG9ydFwiIHdhcyBzdWNjZXNzZnVsbHkgcHVibGlzaGVkIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJDb250YWN0IFVzXCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcImRvbmxvYWRlcmVmZXJuY2VcIiB3YXMgYWRkZWQgc3VjY2Vzc2Z1bGx5LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiZG9ubG9hZGVyZWZlcm5jZVwiIHdhcyBjaGFuZ2VkIHN1Y2Nlc3NmdWxseS4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcImRvbmxvYWRSZWZlcm5jZVwiIHdhcyBkZWxldGVkIHN1Y2Nlc3NmdWxseS4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcImRvd25sb2FkXCIgd2FzIGFkZGVkIHN1Y2Nlc3NmdWxseS4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcImRvd25sb2FkXCIgd2FzIGNoYW5nZWQgc3VjY2Vzc2Z1bGx5LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiZG93bmxvYWRcIiB3YXMgYWRkZWQgc3VjY2Vzc2Z1bGx5LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiZG93bmxvYWRcIiB3YXMgY2hhbmdlZCBzdWNjZXNzZnVsbHkuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJEb3dubG9hZCBSZXBvcnRcIiB3YXMgc3VjY2Vzc2Z1bGx5IHB1Ymxpc2hlZCJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiRG93bmxvYWQgUmVmZXJlbmNlXCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcInNlYXJjaFwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJzZWFyY2hcIiB3YXMgY2hhbmdlZCBzdWNjZXNzZnVsbHkuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJTZWFyY2ggUmVmZXJlbmNlXCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcInNlYXJjaFwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJzZWFyY2hcIiB3YXMgY2hhbmdlZCBzdWNjZXNzZnVsbHkuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJTZWFyY2ggUmVwb3J0XCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIkRvd25sb2FkIFJlcG9ydFwiIHdhcyBjaGFuZ2VkIHN1Y2Nlc3NmdWxseS4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIkRvd25sb2FkIFJlZmVyZW5jZVwiIHdhcyBjaGFuZ2VkIHN1Y2Nlc3NmdWxseS4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIkRvd25sb2FkIFJlZmVyZW5jZVwiIHdhcyBzdWNjZXNzZnVsbHkgcHVibGlzaGVkLiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiRG93bmxvYWQgUmVwb3J0XCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJTZWFyY2ggUmVwb3J0XCIgd2FzIGNoYW5nZWQgc3VjY2Vzc2Z1bGx5LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiU2VhcmNoIFJlcG9ydFwiIHdhcyBzdWNjZXNzZnVsbHkgdW5wdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlNlYXJjaCBSZXBvcnRcIiB3YXMgc3VjY2Vzc2Z1bGx5IHB1Ymxpc2hlZCJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiU2VhcmNoIFJlZmVyZW5jZVwiIHdhcyBjaGFuZ2VkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiU2VhcmNoIFJlZmVyZW5jZVwiIHdhcyBzdWNjZXNzZnVsbHkgcHVibGlzaGVkLiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiU2VhcmNoIFJlcG9ydFwiIHdhcyBzdWNjZXNzZnVsbHkgcHVibGlzaGVkLiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiU2VhcmNoIFJlcG9ydFwiIHdhcyBjaGFuZ2VkIHN1Y2Nlc3NmdWxseS4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlNlYXJjaCBSZXBvcnRcIiB3YXMgc3VjY2Vzc2Z1bGx5IHVucHVibGlzaGVkIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJTZWFyY2ggUmVwb3J0XCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQiXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgbGluayBcIlJlZmVyZW5jZVwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIFlvdSBtYXkgZWRpdCBpdCBhZ2FpbiBiZWxvdy4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgbGluayBcIlJlcG9ydFwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIFlvdSBtYXkgZWRpdCBpdCBhZ2FpbiBiZWxvdy4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgbGluayBcIlNlYXJjaCBSZXBvcnRcIiB3YXMgYWRkZWQgc3VjY2Vzc2Z1bGx5LiBZb3UgbWF5IGVkaXQgaXQgYWdhaW4gYmVsb3cuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIGxpbmsgXCJTZWFyY2ggUmVmZXJlbmNlXCIgd2FzIGFkZGVkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiSG9tZVwiIHdhcyBjaGFuZ2VkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiSG9tZVwiIHdhcyBzdWNjZXNzZnVsbHkgcHVibGlzaGVkLiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBzbGlkZXNob3cgaG9tZSBwbHVnaW4gXCI5XCIgd2FzIGFkZGVkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSB0ZXh0IFwiTGlicmFyeSBiYXNlZCB3ZWJzaXRlIGZvciBjLi4uXCIgd2FzIGFkZGVkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiSG9tZVwiIHdhcyBjaGFuZ2VkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiSG9tZVwiIHdhcyBzdWNjZXNzZnVsbHkgcHVibGlzaGVkLiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBsaW5rIFwiVXBsb2FkIFJlZmVybmNlXCIgd2FzIGFkZGVkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBsaW5rIFwiRG93bmxvYWQgUmVmZXJlbmNlXCIgd2FzIGFkZGVkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBsaW5rIFwiU2VhcmNoIFJlZmVyZW5jZVwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIFlvdSBtYXkgZWRpdCBpdCBhZ2FpbiBiZWxvdy4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgc2xpZGVzaG93IHJlZmVyZW5jZSBwbHVnaW4gXCIyMVwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIFlvdSBtYXkgZWRpdCBpdCBhZ2FpbiBiZWxvdy4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlJlZmVyZW5jZVwiIHdhcyBjaGFuZ2VkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiUmVmZXJlbmNlXCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIGxpbmsgXCJVcGxvYWQgUmVwb3J0XCIgd2FzIGFkZGVkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBsaW5rIFwiRG93bmxvYWQgUmVwb3J0XCIgd2FzIGFkZGVkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBsaW5rIFwiU2VhcmNoIFJlcG9ydFwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIFlvdSBtYXkgZWRpdCBpdCBhZ2FpbiBiZWxvdy4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgc2xpZGVzaG93IHJlcG9ydCBwbHVnaW4gXCIyOVwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIFlvdSBtYXkgZWRpdCBpdCBhZ2FpbiBiZWxvdy4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlJlcG9ydFwiIHdhcyBjaGFuZ2VkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiUmVwb3J0XCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJTZWFyY2hcIiB3YXMgYWRkZWQgc3VjY2Vzc2Z1bGx5LiBZb3UgbWF5IGVkaXQgaXQgYWdhaW4gYmVsb3cuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIGxpbmsgXCJTZWFyY2ggUmVmZXJlbmNlXCIgd2FzIGFkZGVkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBsaW5rIFwiU2VhcmNoIFJlcG9ydFwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIFlvdSBtYXkgZWRpdCBpdCBhZ2FpbiBiZWxvdy4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgbGluayBcIlJlZmVyZW5jZVwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIFlvdSBtYXkgZWRpdCBpdCBhZ2FpbiBiZWxvdy4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgbGluayBcIlJlcG9ydFwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIFlvdSBtYXkgZWRpdCBpdCBhZ2FpbiBiZWxvdy4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgc2xpZGVzaG93IHNlYXJjaCBwbHVnaW4gXCIzOFwiIHdhcyBhZGRlZCBzdWNjZXNzZnVsbHkuIFlvdSBtYXkgZWRpdCBpdCBhZ2FpbiBiZWxvdy4iXSxbIl9fanNvbl9tZXNzYWdlIiwwLDIwLCJUaGUgcGFnZSBcIlNlYXJjaFwiIHdhcyBjaGFuZ2VkIHN1Y2Nlc3NmdWxseS4gWW91IG1heSBlZGl0IGl0IGFnYWluIGJlbG93LiJdLFsiX19qc29uX21lc3NhZ2UiLDAsMjAsIlRoZSBwYWdlIFwiU2VhcmNoXCIgd2FzIHN1Y2Nlc3NmdWxseSBwdWJsaXNoZWQuIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJTZWFyY2hcIiB3YXMgc3VjY2Vzc2Z1bGx5IHVucHVibGlzaGVkIl0sWyJfX2pzb25fbWVzc2FnZSIsMCwyMCwiVGhlIHBhZ2UgXCJTZWFyY2hcIiB3YXMgc3VjY2Vzc2Z1bGx5IHB1Ymxpc2hlZCJdXXUu	2014-06-05 02:43:36.150702+03
 \.
 
 
@@ -2969,7 +3209,7 @@ SELECT pg_catalog.setval('django_site_id_seq', 1, true);
 --
 
 COPY menus_cachekey (id, language, site, key) FROM stdin;
-5	en	1	menu_cache_menu_nodes_en_1_1_user
+16	en	1	menu_cache_menu_nodes_en_1_1_user
 \.
 
 
@@ -2979,7 +3219,7 @@ COPY menus_cachekey (id, language, site, key) FROM stdin;
 -- Name: menus_cachekey_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('menus_cachekey_id_seq', 5, true);
+SELECT pg_catalog.setval('menus_cachekey_id_seq', 16, true);
 
 
 --
@@ -5125,7 +5365,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2014-05-21 13:18:02 EAT
+-- Completed on 2014-05-22 03:09:27 EAT
 
 --
 -- PostgreSQL database dump complete
