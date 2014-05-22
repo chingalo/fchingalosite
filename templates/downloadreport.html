@@ -75,8 +75,8 @@
 								{% if report.name_of_receiver == receiver %}
 								
 								<p style = "text-align:cjustify;">
-									<b><u>Title  </u> : {{report.report_title}}</b><br>
-									<br><u>Discription  </u>  </b>{{report.description_of_report}}</p>
+									<b><u>Title Of Report  </u> : {{report.report_title}}</b><br>
+									<br><b><u>Discription Of Report </u></b>: {{report.description_of_report}}</p>
 								{% for file in fileList %}
 								{% if file.report_title == report %}
 								<li style="padding: 3px"><a href="{{file.report_file.url}}"><b><i class="icon-file icon-white"> </i>{{file}}</b>
