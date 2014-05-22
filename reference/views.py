@@ -64,9 +64,12 @@ def referenceUploadStep2(request):
 #downloading  reference file 
 def referenceDownload(request):
 	
+	#data form database 
+	referenceList = Reference.objects.all()
+	fileList = Reference_file.objects.all()
 	
 	message = "download page for reference, still under development"
-	context = {'message':message,}
+	context = {'message':message,'referenceList':referenceList,'fileList':fileList,}
 	return render(request, 'downloadreference.html', context)
 	
 

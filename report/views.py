@@ -89,10 +89,14 @@ def reportUploadStep3(request):
 
 #downloading report file
 def reportDownload(request):
-	page = "report"
+	
+	#data form database 		
+	receiverList =  Receiver_of_report.objects.all()
+	reportList = Details_of_Report.objects.all()
+	fileList = Report_files.objects.all()
 	
 	message = "download page for report, still under development"
-	context = {'message':message,'page':page,}
+	context = {'message':message,'receiverList':receiverList,'reportList':reportList,'fileList':fileList,}
 	return render(request, 'downloadreport.html', context)
 
 
