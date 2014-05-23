@@ -5,9 +5,17 @@
 {% block page_contents %}
 <div class = "row-fluid">
 	<div class = "well">		
-		{{message}}<br>receiver form form :{{searchedReceiver}}
+		{{message}}
+		{% if page == "searchResults" %}
+		<p>You searched for: <strong>{{ searchedReportTitle }} and {{searchedReceiver}} </strong></p>
+		
+		<p>Found {{ resultOfReport|length }} reports{{ resultOfReport|pluralize }}.</p>
+		<p>Found {{ resultOfReceiver|length }} receiver{{ resultOfReceiver|pluralize }}.</p>
+		<br>
+		<!-- fileList
 		report form form :{{searchedReceiver}}<br>report form form :{{searchedReportTitle}}<br>
-		search results-->reciver:{{resultOfReceiver}}<br>search results-->report:{{resultOfReport}}<br>
+		search results--reciver:{{resultOfReceiver}}<br>search results--report:{{resultOfReport}}<br>-->
+		{% else %}
 			<hr>
 		<form action = "{% url 'reportSearch'  %}" method = "POST" >
 			{% csrf_token %}
@@ -33,7 +41,8 @@
 				<input type = "submit" value = "Search" name = "submit">&#160;&#160;
 				<input type = "reset" value = "Reset" name = "reset">					
 			</div>	
-		</form>	
+		</form>
+		{% endif %}	
 	</div>	
 </div>
 {% endblock%}

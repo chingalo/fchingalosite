@@ -5,7 +5,14 @@
 {% block page_contents %}
 <div class = "row-fluid">
 	<div class = "well">
-	{{message}}<br>results:{{resultOfReference}}<br>form form:{{searchedReference}}<br><hr>
+		{{message}}<br>
+		{% if page == "searchResults" %}
+		<p>You searched for: <strong>{{ searchedReference }}</strong></p>
+		
+		<p>Found {{ resultOfReference|length }} reference{{ resultOfReference|pluralize }}.</p>
+		
+	<!--results:{{resultOfReference}}<br>form form:{{searchedReference}}<br> fileList--><hr>
+		{% else %}
 		<form action = "{% url 'referenceSearch'  %}" method = "POST" >
 			{% csrf_token %}
 			<table class="table table-striped">
@@ -23,6 +30,7 @@
 				<input type = "reset" value = "Reset" name = "reset">					
 			</div>	
 		</form>	
+		{% endif %}
 	  </div>	
 </div>
 {% endblock%}

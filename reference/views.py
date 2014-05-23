@@ -76,21 +76,26 @@ def referenceDownload(request):
 
 #search for  reference file or detail		
 def referenceSearch(request):
+	page = ''
+	message = "search page for report, still under development"
 	searchedReference = ''
 	resultOfReference = []
+	fileList = Reference_file.objects.all()
 	if  request.POST:
+		page = 'searchResults'
 		form = request.POST
 		
 		#taking values
 		SearchList = form.getlist('reference')
 		searchedReference = SearchList[0]
 		
-		resultOfReference = Reference.objects.filter(reference_title__icontains = searchedReference)	
+		#checking if field form search for is filled and filter
+		if searchedReference:						
+			resultOfReference = Reference.objects.filter(reference_title__icontains = searchedReference)		
+		
 	
-	message = "search page for reference, still under development"
-	context = {'message':message,'resultOfReference':resultOfReference,'searchedReference':searchedReference}
+	context = {'message':message,'page':page,'fileList':fileList,'resultOfReference':resultOfReference,'searchedReference':searchedReference,}
 	return render(request, 'searchreference.html', context)
-
 
 
 	
