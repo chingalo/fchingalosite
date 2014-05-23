@@ -7,11 +7,23 @@
 	<div class = "well">
 		{{message}}<br>
 		{% if page == "searchResults" %}
-		<p>You searched for: <strong>{{ searchedReference }}</strong></p>
-		
+		<p>You searched for reference files whose reference's name contains <strong>'{{ searchedReference }}'</strong></p>		
 		<p>Found {{ resultOfReference|length }} reference{{ resultOfReference|pluralize }}.</p>
-		
-	<!--results:{{resultOfReference}}<br>form form:{{searchedReference}}<br> fileList--><hr>
+		<!--- display files searched------->		
+		<ul class="nav nav-tabs nav-stacked">
+			{% for reference in resultOfReference %}
+			{% for file in fileList %}
+			{% if file.reference_title == reference %}			
+			<li style="padding: 3px"> 
+				<a href="{{file.reference_file.url}}"><i>Reference Name : {{reference}}<br>
+				Category : {{reference.reference_category}}</i><br><b><i class="icon-file icon-white"></i>
+				File Name : {{file}}</b></a>
+			</li>
+			{% endif %}			
+			{% endfor %}
+			{% endfor %}		
+		</ul>
+	
 		{% else %}
 		<form action = "{% url 'referenceSearch'  %}" method = "POST" >
 			{% csrf_token %}
