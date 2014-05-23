@@ -7,14 +7,105 @@
 	<div class = "well">		
 		{{message}}
 		{% if page == "searchResults" %}
-		<p>You searched for: <strong>{{ searchedReportTitle }} and {{searchedReceiver}} </strong></p>
+		<!-- all filled-->
+		{% if searchedReportTitle != "" and searchedReceiver != "" %}
+		<p>You searched for files whose report's title contains <strong>'{{ searchedReportTitle }}'</strong> and name of report's reciver cobtains <strong>'{{searchedReceiver}}' </strong></p>
 		
 		<p>Found {{ resultOfReport|length }} reports{{ resultOfReport|pluralize }}.</p>
 		<p>Found {{ resultOfReceiver|length }} receiver{{ resultOfReceiver|pluralize }}.</p>
-		<br>
-		<!-- fileList
-		report form form :{{searchedReceiver}}<br>report form form :{{searchedReportTitle}}<br>
-		search results--reciver:{{resultOfReceiver}}<br>search results--report:{{resultOfReport}}<br>-->
+		<!------ display results ------>
+		<ul class="nav nav-tabs nav-stacked">		
+			
+			{% for receiver in resultOfReceiver %}
+			{% for report in  resultOfReport%}
+			{% if report.name_of_receiver == receiver %}
+			{% for file in fileList %}
+			{% if file.report_title == report %}
+			<li style="padding: 3px">
+				<a href="{{file.report_file.url}}">
+					<i>
+						Name of report's receiver : {{receiver}} <br>
+						Title of Report : {{report}} <br>									
+					</i>
+				<b><i class="icon-file icon-white"> </i>File Name : {{file}}</b></a>
+			</li>
+			{% endif %}
+			{% endfor %}
+			{% endif %}
+			{% endfor %}
+			{% endfor %}			
+		</ul>
+		{% endif %}
+		
+		<!-- Report Title filled-->
+		{% if searchedReportTitle != "" and searchedReceiver = "" %}
+		<p>You searched for files whose report's title contains <strong>'{{ searchedReportTitle }}'</strong></p>
+		
+		<p>Found {{ resultOfReport|length }} reports{{ resultOfReport|pluralize }}.</p>
+		<p>Found {{ resultOfReceiver|length }} receiver{{ resultOfReceiver|pluralize }}.</p>
+		<!------ display results ------>
+		<ul class="nav nav-tabs nav-stacked">		
+			
+			{% for receiver in receiverList %}
+			{% for report in  resultOfReport%}
+			{% if report.name_of_receiver == receiver %}
+			{% for file in fileList %}
+			{% if file.report_title == report %}
+			<li style="padding: 3px">
+				<a href="{{file.report_file.url}}">
+					<i>
+						Name of report's receiver : {{receiver}} <br>
+						Title of Report : {{report}} <br>									
+					</i>
+				<b><i class="icon-file icon-white"> </i>File Name : {{file}}</b></a>
+			</li>
+			{% endif %}
+			{% endfor %}
+			{% endif %}
+			{% endfor %}
+			{% endfor %}			
+		</ul>
+		
+		{% endif %}
+		
+		<!-- receiver filled-->
+		{% if searchedReportTitle = "" and searchedReceiver != "" %} 
+		<p>You searched for files whose  name of report's reciver cobtains <strong>'{{searchedReceiver}}' </strong></p>
+		
+		<p>Found {{ resultOfReport|length }} reports{{ resultOfReport|pluralize }}.</p>
+		<p>Found {{ resultOfReceiver|length }} receiver{{ resultOfReceiver|pluralize }}.</p>
+		<!------ display results ------>
+		<ul class="nav nav-tabs nav-stacked">		
+			
+			{% for receiver in resultOfReceiver %}
+			{% for report in  reportList%}
+			{% if report.name_of_receiver == receiver %}
+			{% for file in fileList %}
+			{% if file.report_title == report %}
+			<li style="padding: 3px">
+				<a href="{{file.report_file.url}}">
+					<i>
+						Name of report's receiver : {{receiver}} <br>
+						Title of Report : {{report}} <br>									
+					</i>
+				<b><i class="icon-file icon-white"> </i>File Name : {{file}}</b></a>
+			</li>
+			{% endif %}
+			{% endfor %}
+			{% endif %}
+			{% endfor %}
+			{% endfor %}			
+		</ul>
+		{% endif %}
+		
+		<!--no filed supplied---->
+		{% if searchedReportTitle = "" and searchedReceiver = "" %}
+		<p>You searched for files whose  name of report's reciver cobtains <strong>'{{searchedReceiver}}' </strong></p>
+		
+		<p>Found {{ resultOfReport|length }} reports{{ resultOfReport|pluralize }}.</p>
+		<p>Found {{ resultOfReceiver|length }} receiver{{ resultOfReceiver|pluralize }}.</p>
+		{% endif %}
+
 		{% else %}
 			<hr>
 		<form action = "{% url 'reportSearch'  %}" method = "POST" >

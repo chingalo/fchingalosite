@@ -108,6 +108,8 @@ def reportSearch(request):
 	fileList = Report_files.objects.all()
 	resultOfReceiver = []
 	resultOfReport = []
+	receiverList =  Receiver_of_report.objects.all()
+	reportList = Details_of_Report.objects.all()
 	message = "search page for report, still under development"
 	
 	if  request.POST:
@@ -130,7 +132,7 @@ def reportSearch(request):
 			resultOfReport = Details_of_Report.objects.filter(report_title__icontains = searchedReportTitle)							
 	
 	
-	context = {'message':message,'page':page,'fileList':fileList,'resultOfReceiver':resultOfReceiver,'resultOfReport':resultOfReport,'searchedReportTitle':searchedReportTitle,'searchedReceiver':searchedReceiver,}
+	context = {'message':message,'reportList':reportList,'receiverList':receiverList,'page':page,'fileList':fileList,'resultOfReceiver':resultOfReceiver,'resultOfReport':resultOfReport,'searchedReportTitle':searchedReportTitle,'searchedReceiver':searchedReceiver,}
 	return render(request, 'searchreport.html', context)	
 	
 	
