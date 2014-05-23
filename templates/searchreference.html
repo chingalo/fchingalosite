@@ -4,9 +4,9 @@
 <!---------------contents for search reference------------------>
 {% block page_contents %}
 <div class = "row-fluid">
-	<div class = "well">
-		{{message}}<br>
+	<div class = "well">		
 		{% if page == "searchResults" %}
+		
 		<p>You searched for reference files whose reference's name contains <strong>'{{ searchedReference }}'</strong></p>		
 		<p>Found {{ resultOfReference|length }} reference{{ resultOfReference|pluralize }}.</p>
 		<!--- display files searched------->		
