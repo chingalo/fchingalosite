@@ -5,7 +5,7 @@
 {% block page_contents %}
 <div class = "row-fluid">
 	<div class = "well">
-	{{message}}	<hr>
+	{{message}}<br>results:{{resultOfReference}}<br>form form:{{searchedReference}}<br><hr>
 		<form action = "{% url 'referenceSearch'  %}" method = "POST" >
 			{% csrf_token %}
 			<table class="table table-striped">
