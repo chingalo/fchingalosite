@@ -5,7 +5,10 @@
 {% block page_contents %}
 <div class = "row-fluid">
 	<div class = "well">		
-		{{message}}	<hr>
+		{{message}}<br>receiver form form :{{searchedReceiver}}
+		report form form :{{searchedReceiver}}<br>report form form :{{searchedReportTitle}}<br>
+		search results-->reciver:{{resultOfReceiver}}<br>search results-->report:{{resultOfReport}}<br>
+			<hr>
 		<form action = "{% url 'reportSearch'  %}" method = "POST" >
 			{% csrf_token %}
 			<table class="table table-striped">

@@ -104,19 +104,26 @@ def reportDownload(request):
 def reportSearch(request):
 	searchedReportTitle = ''
 	searchedReceiver = ''
+	fileList = Report_files.objects.all()
+	resultOfReceiver = []
+	resultOfReceiver = []
 	
 	if  request.POST:
 		form = request.POST
-		#taking values  report_title    name_of_receiver  reciver  report
+		#taking values  report_title    name_of_receiver  reciver  report .filter(title__icontains=q)
 		SearchList = form.getlist('reciver')
 		searchedReceiver= SearchList[0]
 		
 		SearchList = form.getlist('report')
 		searchedReportTitle = SearchList[0]
+		
+		#filter form database based on values in form
+		resultOfReceiver = Receiver_of_report.objects.filter(name_of_receiver__icontains = searchedReceiver)
+		resultOfReport = Details_of_Report.objects.filter(report_title__icontains = searchedReportTitle)	
 	
 	
 	message = "search page for report, still under development"
-	context = {'message':message,'form':searchedReportTitle,}
+	context = {'message':message,'resultOfReport':resultOfReceiver,'resultOfReport':resultOfReport,'searchedReportTitle':searchedReportTitle,'searchedReceiver':searchedReceiver,}
 	return render(request, 'searchreport.html', context)	
 	
 	
