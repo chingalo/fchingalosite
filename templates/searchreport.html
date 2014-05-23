@@ -9,10 +9,21 @@
 		{% if page == "searchResults" %}
 		<!-- all filled-->
 		{% if searchedReportTitle != "" and searchedReceiver != "" %}
-		<p>You searched for files whose report's title contains <strong>'{{ searchedReportTitle }}'</strong> and name of report's reciver cobtains <strong>'{{searchedReceiver}}' </strong></p>
+		{%if resultOfReport and resultOfReceiver  %}
+		<p>List of files whose report's title contains <strong>'{{ searchedReportTitle }}'</strong> and name of report's reciver cobtains <strong>'{{searchedReceiver}}' </strong></p>
 		
-		<p>Found {{ resultOfReport|length }} reports{{ resultOfReport|pluralize }}.</p>
+		<p>Found {{ resultOfReport|length }} report{{ resultOfReport|pluralize }}.</p>
 		<p>Found {{ resultOfReceiver|length }} receiver{{ resultOfReceiver|pluralize }}.</p>
+		{% else %}
+		<p>
+			<i>
+				There is no file whose report's title contains <strong>'{{ searchedReportTitle }}'</strong> and name of report's reciver cobtains <strong>'{{searchedReceiver}}' </strong>, please click buttom below to search again			
+			</i>
+		</p>
+		<div style="Text-align:center;">
+			<button onclick="window.location.href='{% url 'reportSearch'  %}'">Search again</button>
+		</div>
+		{% endif %}
 		<!------ display results ------>
 		<ul class="nav nav-tabs nav-stacked">		
 			
@@ -39,10 +50,21 @@
 		
 		<!-- Report Title filled-->
 		{% if searchedReportTitle != "" and searchedReceiver = "" %}
-		<p>You searched for files whose report's title contains <strong>'{{ searchedReportTitle }}'</strong></p>
+		{% if resultOfReport %}
+		<p>List of for files whose report's title contains <strong>'{{ searchedReportTitle }}'</strong></p>		
+		<p>Found {{ resultOfReport|length }} report{{ resultOfReport|pluralize }}.</p>
 		
-		<p>Found {{ resultOfReport|length }} reports{{ resultOfReport|pluralize }}.</p>
-		<p>Found {{ resultOfReceiver|length }} receiver{{ resultOfReceiver|pluralize }}.</p>
+		{% else %}
+		<p> 
+			<i>
+				There is no file whose  name of report's title cobtains <strong>'{{searchedReportTitle}}'</strong>, please click buttom below to search again
+			</i>
+		</p>
+		<div style="Text-align:center;">
+			<button onclick="window.location.href='{% url 'reportSearch'  %}'">Search again</button>
+		</div>
+		
+		{% endif %}
 		<!------ display results ------>
 		<ul class="nav nav-tabs nav-stacked">		
 			
@@ -70,10 +92,21 @@
 		
 		<!-- receiver filled-->
 		{% if searchedReportTitle = "" and searchedReceiver != "" %} 
-		<p>You searched for files whose  name of report's reciver cobtains <strong>'{{searchedReceiver}}' </strong></p>
-		
-		<p>Found {{ resultOfReport|length }} reports{{ resultOfReport|pluralize }}.</p>
+		{% if resultOfReceiver %}
+		<p>List of files whose  name of report's reciver cobtains <strong>'{{searchedReceiver}}' </strong></p>		
 		<p>Found {{ resultOfReceiver|length }} receiver{{ resultOfReceiver|pluralize }}.</p>
+		
+		{% else %}
+		<p> 
+			<i>
+				There is no file whose  name of report's reciver cobtains <strong>'{{searchedReceiver}}'</strong>, please click buttom below to search again 
+			</i>
+		</p>
+		<div style="Text-align:center;">
+			<button onclick="window.location.href='{% url 'reportSearch'  %}'">Search again</button>
+		</div>
+		
+		{% endif %}
 		<!------ display results ------>
 		<ul class="nav nav-tabs nav-stacked">		
 			
@@ -100,10 +133,11 @@
 		
 		<!--no filed supplied---->
 		{% if searchedReportTitle = "" and searchedReceiver = "" %}
-		<p>You searched for files whose  name of report's reciver cobtains <strong>'{{searchedReceiver}}' </strong></p>
+		<p style="Text-align:justify;" ><i>You haven't filled fields <br>There are no files found, please click buttom below to search again</i></p>
+		<br><div style="Text-align:center;">
+			<button onclick="window.location.href='{% url 'reportSearch'  %}'">Search again</button>
+		</div>
 		
-		<p>Found {{ resultOfReport|length }} reports{{ resultOfReport|pluralize }}.</p>
-		<p>Found {{ resultOfReceiver|length }} receiver{{ resultOfReceiver|pluralize }}.</p>
 		{% endif %}
 
 		{% else %}
