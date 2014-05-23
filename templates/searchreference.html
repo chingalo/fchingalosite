@@ -6,9 +6,18 @@
 <div class = "row-fluid">
 	<div class = "well">		
 		{% if page == "searchResults" %}
-		
-		<p>You searched for reference files whose reference's name contains <strong>'{{ searchedReference }}'</strong></p>		
+		{% if resultOfReference %}
+		<p>List of reference files whose reference's name contains <strong>'{{ searchedReference }}'</strong></p>		
 		<p>Found {{ resultOfReference|length }} reference{{ resultOfReference|pluralize }}.</p>
+		{% else %}
+		<p>
+			There is no reference file whose reference's name contains <strong>'{{ searchedReference }}'</strong>, please click buttom below to search again
+		</p>
+		<div style="Text-align:center;">
+			<button onclick="window.location.href='{% url 'referenceSearch'  %}'">Search again</button>
+		</div>
+		{% endif %}
+		
 		<!--- display files searched------->		
 		<ul class="nav nav-tabs nav-stacked">
 			{% for reference in resultOfReference %}
@@ -25,6 +34,13 @@
 		</ul>
 	
 		{% else %}
+		<p style="Text-align:center;">
+			<b>
+				<i>
+					<u>Search form for Reference files</u>
+				</i>
+			</b>		
+		</p>
 		<form action = "{% url 'referenceSearch'  %}" method = "POST" >
 			{% csrf_token %}
 			<table class="table table-striped">

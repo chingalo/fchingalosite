@@ -5,7 +5,6 @@
 {% block page_contents %}
 <div class = "row-fluid">
 	<div class = "well">		
-		{{message}}
 		{% if page == "searchResults" %}
 		<!-- all filled-->
 		{% if searchedReportTitle != "" and searchedReceiver != "" %}
@@ -141,7 +140,13 @@
 		{% endif %}
 
 		{% else %}
-			<hr>
+			<p style="Text-align:center;">
+				<b>
+					<i>
+						<u>Search form for report files</u>
+					</i>
+				</b>		
+			</p>
 		<form action = "{% url 'reportSearch'  %}" method = "POST" >
 			{% csrf_token %}
 			<table class="table table-striped">
@@ -178,14 +183,3 @@
 <li ><a href="{% url 'reportDownload'  %}">Download Report</a></li>
 {% endblock%}
 
-
-
-			{% csrf_token %}
-			<table class="table table-striped">
-				{{form.as_table}}			
-			</table>
-			<span class="pull-right">
-				<input type = "submit" value = "submit" name = "submit">&#160;&#160;
-				<input type = "reset" value = "Reset" name = "reset">			
-			</span>					
-		</form>
