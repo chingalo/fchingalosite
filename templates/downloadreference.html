@@ -8,24 +8,37 @@
 {% endblock%}
 <!---------------contents for download reference------------------>
 {% block page_contents %}
+
 <div class = "row-fluid">
-	<div class = "well">		
-		<div class="tabbable">
+	<div class = "well">
+		<p>Reference titles</p>		
+		<div class="tabbable tabs-below">
 			<!---------- tabs----------->
-			<ul class ="nav nav-tabs">
-				<li class="active span3">
-					<a href="#tab1" data-toggle='tab'>Economy</a>
-				</li>
-				<li class="span3"><a href="#tab2" data-toggle='tab'>Institution</a></li>
-				<li class="span3"><a href="#tab3" data-toggle='tab'>Social</a></li>
-				<li class="span3"><a href="#tab4" data-toggle='tab'>Others</a></li>			
+			<ul class ="nav nav-tabs ">
+				<li class="active span5">
+					<a href="#tab1" data-toggle='tab'>Business Plan</a>
+				</li> 
+				<li class="span5"><a href="#tab2" data-toggle='tab'>Business Records & Financial Management </a></li>
+				<li class="span5"><a href="#tab3" data-toggle='tab'>Business Skills & Entrepreneurship Development Training </a></li>
+				<li class="span5"><a href="#tab4" data-toggle='tab'>Evaluation & Impact Assessment</a></li>	
+				<li class="span5"><a href="#tab5" data-toggle='tab'>Financial & Economic Analysis </a></li>
+				<li class="span5"><a href="#tab6" data-toggle='tab'>Institutional & Organizational development </a></li>
+				<li class="span5"><a href="#tab7" data-toggle='tab'>Legal Framework </a></li>
+				<li class="span5"><a href="#tab8" data-toggle='tab'>Microfinance Best Practices</a></li>
+				<li class="span5"><a href="#tab9" data-toggle='tab'>Project Management</a></li>	
+				<li class="span5"><a href="#tab10" data-toggle='tab'>Socio- Economic Studies </a></li>
+				<li class="span5"><a href="#tab11" data-toggle='tab'>Training & Capacity Building </a></li>
+				<li class="span5"><a href="#tab12" data-toggle='tab'>Waste Management </a></li>	
+				<li class="span5"><a href="#tab13" data-toggle='tab'>Water Supply Management </a></li>			
 			</ul>
 			<!-------------contents for tabs----------{% if forloop.counter == 1 %}{% endif %}-->
-			
+			<hr><i>Reference files in this reference's category :-</i>
 				<div class="tab-content" style="text-align: left">
 				<div class="tab-pane active" id="tab1">
 					<ul class="nav nav-tabs nav-stacked">
-						{% for reference in referenceList %}{% if reference.reference_category == "Economy" %}
+						Business Plan
+						{% for reference in referenceList %}
+						{% if reference.reference_category == "Business Plan" %}
 						<p>
 							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
 							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
@@ -44,12 +57,12 @@
 						</li>
 					</ul>
 				</div>
-
-			
+				
 				<div class="tab-pane" id="tab2">
 					<ul class="nav nav-tabs nav-stacked">
+						Business Records & Financial Management
 						{% for reference in referenceList %}
-						{% if reference.reference_category == "Institution" %}
+						{% if reference.reference_category == "Business Records & Financial Management" %}
 						<p>
 							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
 							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
@@ -71,7 +84,8 @@
 			
 				<div class="tab-pane" id="tab3">
 					<ul class="nav nav-tabs nav-stacked">
-						{% for reference in referenceList %}{% if reference.reference_category == "Social" %}
+						Business Skills & Entrepreneurship Development Training
+						{% for reference in referenceList %}{% if reference.reference_category == "Business Skills & Entrepreneurship Development Training" %}
 						<p>
 							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
 							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
@@ -93,8 +107,222 @@
 
 				<div class="tab-pane" id="tab4">
 					<ul class="nav nav-tabs nav-stacked">
+						Evaluation & Impact Assessment
 						{% for reference in referenceList %}
-						{% if reference.reference_category == "Others" %}
+						{% if reference.reference_category == "Evaluation & Impact Assessment" %}
+						<p>
+							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
+							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
+						</p>						
+						
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}
+						<li style="padding: 3px"> 							
+							<a href="{{file.reference_file.url}}"><br><b><i class="icon-file icon-white"></i> {{file}}</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						</li>
+						{% endif %}
+						{% endfor %}	
+						{% endif %}
+						{% endfor %}									
+					</ul>
+				</div>				
+				
+				<div class="tab-pane" id="tab5">
+					<ul class="nav nav-tabs nav-stacked">
+						Financial & Economic Analysis
+						{% for reference in referenceList %}
+						{% if reference.reference_category == "Financial & Economic Analysis" %}
+						<p>
+							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
+							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
+						</p>	
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}
+						<li style="padding: 3px"> 							
+							<a href="{{file.reference_file.url}}"><br><b><i class="icon-file icon-white"></i> {{file}}</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						</li>
+						{% endif %}
+						{% endfor %}	
+						{% endif %}
+						{% endfor %}											
+					</ul>
+				</div>			
+	
+			
+			
+				<div class="tab-pane" id="tab6">
+					<ul class="nav nav-tabs nav-stacked">
+						Institutional & Organizational development
+						{% for reference in referenceList %}
+						{% if reference.reference_category == "Institutional & Organizational development" %}
+						<p>
+							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
+							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
+						</p>	
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}
+						<li style="padding: 3px"> 							
+							<a href="{{file.reference_file.url}}"><br><b><i class="icon-file icon-white"></i> {{file}}</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						</li>
+						{% endif %}
+						{% endfor %}	
+						{% endif %}
+						{% endfor %}
+																	
+					</ul>
+				</div>										
+			
+
+				<div class="tab-pane" id="tab7">
+					<ul class="nav nav-tabs nav-stacked">
+						Legal Framework
+						{% for reference in referenceList %}
+						{% if reference.reference_category == "Legal Framework" %}
+						<p>
+							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
+							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
+						</p>						
+						
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}
+						<li style="padding: 3px"> 							
+							<a href="{{file.reference_file.url}}"><br><b><i class="icon-file icon-white"></i> {{file}}</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						</li>
+						{% endif %}
+						{% endfor %}	
+						{% endif %}
+						{% endfor %}									
+					</ul>
+				</div>				
+			
+				<div class="tab-pane" id="tab8">
+					<ul class="nav nav-tabs nav-stacked">
+						Microfinance Best Practices
+						{% for reference in referenceList %}
+						{% if reference.reference_category == "Microfinance Best Practices" %}
+						<p>
+							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
+							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
+						</p>	
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}
+						<li style="padding: 3px"> 							
+							<a href="{{file.reference_file.url}}"><br><b><i class="icon-file icon-white"></i> {{file}}</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						</li>
+						{% endif %}
+						{% endfor %}	
+						{% endif %}
+						{% endfor %}											
+					</ul>
+				</div>			
+	
+			
+			
+				<div class="tab-pane" id="tab9">
+					<ul class="nav nav-tabs nav-stacked">
+						Project Management
+						{% for reference in referenceList %}
+						{% if reference.reference_category == "Project Management" %}
+						<p>
+							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
+							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
+						</p>	
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}
+						<li style="padding: 3px"> 							
+							<a href="{{file.reference_file.url}}"><br><b><i class="icon-file icon-white"></i> {{file}}</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						</li>
+						{% endif %}
+						{% endfor %}	
+						{% endif %}
+						{% endfor %}
+																	
+					</ul>
+				</div>										
+			
+
+				<div class="tab-pane" id="tab10">
+					<ul class="nav nav-tabs nav-stacked">
+						Socio- Economic Studies
+						{% for reference in referenceList %}
+						{% if reference.reference_category == "Socio- Economic Studies" %}
+						<p>
+							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
+							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
+						</p>						
+						
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}
+						<li style="padding: 3px"> 							
+							<a href="{{file.reference_file.url}}"><br><b><i class="icon-file icon-white"></i> {{file}}</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						</li>
+						{% endif %}
+						{% endfor %}	
+						{% endif %}
+						{% endfor %}									
+					</ul>
+				</div>				
+				
+				<div class="tab-pane" id="tab11">
+					<ul class="nav nav-tabs nav-stacked">
+						Training & Capacity Building
+						{% for reference in referenceList %}
+						{% if reference.reference_category == "Training & Capacity Building" %}
+						<p>
+							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
+							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
+						</p>	
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}
+						<li style="padding: 3px"> 							
+							<a href="{{file.reference_file.url}}"><br><b><i class="icon-file icon-white"></i> {{file}}</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						</li>
+						{% endif %}
+						{% endfor %}	
+						{% endif %}
+						{% endfor %}											
+					</ul>
+				</div>			
+	
+			
+			
+				<div class="tab-pane" id="tab12">
+					<ul class="nav nav-tabs nav-stacked">
+						Waste Management
+						{% for reference in referenceList %}
+						{% if reference.reference_category == "Waste Management" %}
+						<p>
+							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
+							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
+						</p>	
+						{% for file in fileList %}
+						{% if file.reference_title == reference %}
+						<li style="padding: 3px"> 							
+							<a href="{{file.reference_file.url}}"><br><b><i class="icon-file icon-white"></i> {{file}}</b>
+							<i class="icon-download-alt pull-right"></i></a>
+						</li>
+						{% endif %}
+						{% endfor %}	
+						{% endif %}
+						{% endfor %}
+																	
+					</ul>
+				</div>										
+			
+
+				<div class="tab-pane" id="tab13">
+					<ul class="nav nav-tabs nav-stacked">
+						Water Supply Management
+						{% for reference in referenceList %}
+						{% if reference.reference_category == "Water Supply Management" %}
 						<p>
 							<b><u>Title Of Reference  </u> : {{reference.reference_title}}</b><br>	
 							<b><u>Discription Of Reference </u></b>: {{reference.reference_title_discription}}					
