@@ -4,15 +4,25 @@ from django.utils import timezone
 
 class Reference(models.Model):
 	reference_title = models.CharField(max_length=200)
-		
+
 	#refernces categories
 	category_choice = (
-	('Economy','Economy'),
-	('Institution','Institution'),
-	('Social','Social'),
-	('Others','Others'),	
+	('Business Plan','Business Plan'),
+	('Business Records & Financial Management ','Business Records & Financial Management '),
+	('Business Skills & Entrepreneurship Development Training','Business Skills & Entrepreneurship Development Training'),
+	('Evaluation and Impact Assessment ','Evaluation and Impact Assessment '),
+	('Financial & Economic Analysis','Financial & Economic Analysis'),
+	('Institutional & Organizational development ','Institutional & Organizational development '),
+	('Legal Framework','Legal Framework'),
+	('Microfinance Best Practices','Microfinance Best Practices'),
+	('Project Management','Project Management'),
+	('Project Management ','Project Management '),
+	('Socio- Economic Studies','Socio- Economic Studies'),
+	('Training & Capacity Building','Training & Capacity Building'),
+	('Waste Management','Waste Management'),
+	('Water Supply Management','Water Supply Management'),	
 	)
-	reference_category = models.CharField(max_length=200, choices = category_choice , default = 'Economy')
+	reference_category = models.CharField(max_length=200, choices = category_choice , default = 'Business Plan')
 	reference_title_discription = models.TextField(max_length=2000, blank=True)
 		
 	def __unicode__(self):  # Python 3: def __str__(self):
