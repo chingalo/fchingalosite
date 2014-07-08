@@ -36,15 +36,13 @@ Add database  configurations inside fchingalosite/settings.py, your
 database configurations should look something similar to this:
 	
 	DATABASES = {
-		'default': {
-			'ENGINE': 'django.db.backends.postgresql_psycopg2',
-			'HOST': 'localhost',
-			'NAME': 'DATABASENAME',
-			'USER': 'USERNAME',
-			'PASSWORD': 'THESECRETPASSWORD',
-			'PORT':'5432',
-		}
-	}
+    'default': { 
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'DATABASE NAME',                     
+        'USER': 'USER NAME',
+        'PASSWORD': 'PASSWORD',
+    }
+}
 After configuration sync database( run command: python manage.py syncdb --all) and then run the server( run command: python manage.py runserver ).
 Incase of any difficulties in configuration refer to [Django CMS Documentation](http://django-cms.readthedocs.org/en/2.2/getting_started/installation.html)
 for more information.
