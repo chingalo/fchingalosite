@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags %}
+
+<!-- contents for search report----- -->
+{% block page_contents %}
+<div class = "row-fluid">
+	<div class = "well">		
+		{% if page == "searchResults" %}
+		<!-- all filled-->
+		{% if searchedReportTitle != "" and searchedReceiver != "" %}
+		{%if resultOfReport and resultOfReceiver  %}
+		<p>List of files whose report's title contains <strong>'{{ searchedReportTitle }}'</strong> and name of report's reciver cobtains <strong>'{{searchedReceiver}}' </strong></p>
+		
+		<p>Found {{ resultOfReport|length }} report{{ resultOfReport|pluralize }}.</p>
+		<p>Found {{ resultOfReceiver|length }} receiver{{ resultOfReceiver|pluralize }}.</p>
+		{% else %}
+		<p>
+			<i>
+				There is no file whose report's title contains <strong>'{{ searchedReportTitle }}'</strong> and name of report's reciver cobtains <strong>'{{searchedReceiver}}' </strong>, please click buttom below to search again			
+			</i>
+		</p>
+		<div style="Text-align:center;">
+			<button onclick="window.location.href='{% url 'reportSearch'  %}'">Search again</button>
+		</div>
+		{% endif %}
+		<!------ display results ------>
+		<ul class="nav nav-tabs nav-stacked">		
+			
+			{% for receiver in resultOfReceiver %}
+			{% for report in  resultOfReport%}
+			{% if report.name_of_receiver == receiver %}
+			{% for file in fileList %}
+			{% if file.report_title == report %}
+			<li style="padding: 3px">
+				<a href="{{file.report_file.url}}">
+					<i>
+						Name of report's receiver : {{receiver}} <br>
+						Title of Report : {{report}} <br>									
+					</i>
+				<b><i class="icon-file icon-white"> </i>File Name : {{file}}</b></a>
+			</li>
+			{% endif %}
+			{% endfor %}
+			{% endif %}
+			{% endfor %}
+			{% endfor %}			
+		</ul>
+		{% endif %}
+		
+		<!-- Report Title filled-->
+		{% if searchedReportTitle != "" and searchedReceiver = "" %}
+		{% if resultOfReport %}
+		<p>List of for files whose report's title contains <strong>'{{ searchedReportTitle }}'</strong></p>		
+		<p>Found {{ resultOfReport|length }} report{{ resultOfReport|pluralize }}.</p>
+		
+		{% else %}
+		<p> 
+			<i>
+				There is no file whose  name of report's title contains <strong>'{{searchedReportTitle}}'</strong>, please click buttom below to search again
+			</i>
+		</p>
+		<div style="Text-align:center;">
+			<button onclick="window.location.href='{% url 'reportSearch'  %}'">Search again</button>
+		</div>
+		
+		{% endif %}
+		<!------ display results ------>
+		<ul class="nav nav-tabs nav-stacked">		
+			
+			{% for receiver in receiverList %}
+			{% for report in  resultOfReport%}
+			{% if report.name_of_receiver == receiver %}
+			{% for file in fileList %}
+			{% if file.report_title == report %}
+			<li style="padding: 3px">
+				<a href="{{file.report_file.url}}">
+					<i>
+						Name of report's receiver : {{receiver}} <br>
+						Title of Report : {{report}} <br>									
+					</i>
+				<b><i class="icon-file icon-white"> </i>File Name : {{file}}</b></a>
+			</li>
+			{% endif %}
+			{% endfor %}
+			{% endif %}
+			{% endfor %}
+			{% endfor %}			
+		</ul>
+		
+		{% endif %}
+		
+		<!-- receiver filled-->
+		{% if searchedReportTitle = "" and searchedReceiver != "" %} 
+		{% if resultOfReceiver %}
+		<p>List of files whose  name of report's reciver cobtains <strong>'{{searchedReceiver}}' </strong></p>		
+		<p>Found {{ resultOfReceiver|length }} receiver{{ resultOfReceiver|pluralize }}.</p>
+		
+		{% else %}
+		<p> 
+			<i>
+				There is no file whose  name of report's reciver contains <strong>'{{searchedReceiver}}'</strong>, please click buttom below to search again 
+			</i>
+		</p>
+		<div style="Text-align:center;">
+			<button onclick="window.location.href='{% url 'reportSearch'  %}'">Search again</button>
+		</div>
+		
+		{% endif %}
+		<!------ display results ------>
+		<ul class="nav nav-tabs nav-stacked">		
+			
+			{% for receiver in resultOfReceiver %}
+			{% for report in  reportList%}
+			{% if report.name_of_receiver == receiver %}
+			{% for file in fileList %}
+			{% if file.report_title == report %}
+			<li style="padding: 3px">
+				<a href="{{file.report_file.url}}">
+					<i>
+						Name of report's receiver : {{receiver}} <br>
+						Title of Report : {{report}} <br>									
+					</i>
+				<b><i class="icon-file icon-white"> </i>File Name : {{file}}</b></a>
+			</li>
+			{% endif %}
+			{% endfor %}
+			{% endif %}
+			{% endfor %}
+			{% endfor %}			
+		</ul>
+		{% endif %}
+		
+		<!--no filed supplied---->
+		{% if searchedReportTitle = "" and searchedReceiver = "" %}
+		<p style="Text-align:justify;" ><i>You haven't filled fields <br>There are no files found, please click buttom below to search again</i></p>
+		<br><div style="Text-align:center;">
+			<button onclick="window.location.href='{% url 'reportSearch'  %}'">Search again</button>
+		</div>
+		
+		{% endif %}
+
+		{% else %}
+			<p style="Text-align:center;">
+				<b>
+					<i>
+						<u>Search form for report files</u>
+					</i>
+				</b>		
+			</p>
+		<form action = "{% url 'reportSearch'  %}" method = "POST" >
+			{% csrf_token %}
+			<table class="table table-striped">
+				<tr>
+					<td>
+					The Reciver Of The Report
+					</td>
+					<td>
+						<input type = "text" name = "reciver" placeholder = "Report's receiver to be searched" />					
+					</td>				
+				</tr>
+				<tr>
+					<td>
+					The Report Title
+					</td>
+					<td>
+						<input type = "text" name = "report" placeholder = "Report to be searched" />					
+					</td>				
+				</tr>			
+			</table><hr>
+			<div  style = "text-align:center; ">
+				<input type = "submit" value = "Search" name = "submit">&#160;&#160;
+				<input type = "reset" value = "Reset" name = "reset">					
+			</div>	
+		</form>
+		{% endif %}	
+	</div>	
+</div>
+{% endblock%}
+
+{% block useful_links %}
+<li ><a href="/report">Report</a></li>
+<li ><a href="{% url 'reportStep1'  %}">Upload Report</a></li>
+<li ><a href="{% url 'reportDownload'  %}">Download Report</a></li>
+{% endblock%}
+

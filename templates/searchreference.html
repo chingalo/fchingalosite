@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags %}
+
+<!---------------contents for search reference------------------>
+{% block page_contents %}
+<div class = "row-fluid">
+	<div class = "well">		
+		{% if page == "searchResults" %}
+		{% if resultOfReference %}
+		<p>List of reference files whose reference's name contains <strong>'{{ searchedReference }}'</strong></p>		
+		<p>Found {{ resultOfReference|length }} reference{{ resultOfReference|pluralize }}.</p>
+		{% else %}
+		<p>
+			There is no reference file whose reference's name contains <strong>'{{ searchedReference }}'</strong>, please click buttom below to search again
+		</p>
+		<div style="Text-align:center;">
+			<button onclick="window.location.href='{% url 'referenceSearch'  %}'">Search again</button>
+		</div>
+		{% endif %}
+		
+		<!--- display files searched------->		
+		<ul class="nav nav-tabs nav-stacked">
+			{% for reference in resultOfReference %}
+			{% for file in fileList %}
+			{% if file.reference_title == reference %}			
+			<li style="padding: 3px"> 
+				<a href="{{file.reference_file.url}}"><i>Reference Name : {{reference}}<br>
+				Category : {{reference.reference_category}}</i><br><b><i class="icon-file icon-white"></i>
+				File Name : {{file}}</b></a>
+			</li>
+			{% endif %}			
+			{% endfor %}
+			{% endfor %}		
+		</ul>
+	
+		{% else %}
+		<p style="Text-align:center;">
+			<b>
+				<i>
+					<u>Search form for Reference files</u>
+				</i>
+			</b>		
+		</p>
+		<form action = "{% url 'referenceSearch'  %}" method = "POST" >
+			{% csrf_token %}
+			<table class="table table-striped">
+				<tr>
+					<td>
+					The Reference Title
+					</td>
+					<td>
+						<input type = "text" name = "reference" placeholder = "Reference title to be searched" />					
+					</td>				
+				</tr>			
+			</table><hr>
+			<div  style = "text-align:center; ">
+				<input type = "submit" value = "Search" name = "submit">&#160;&#160;
+				<input type = "reset" value = "Reset" name = "reset">					
+			</div>	
+		</form>	
+		{% endif %}
+	  </div>	
+</div>
+{% endblock%}
+
+{% block useful_links %}
+<li ><a href="/reference/">Reference</a></li>
+<li ><a href="{% url 'referenceStep1'  %}">Upload Reference</a></li>
+<li ><a href="{% url 'referenceDownload'  %}">Download Reference</a></li>
+{% endblock%}

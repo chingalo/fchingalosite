@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags %}
+
+<!-- contents for uploading refernce into the system -->
+{% block page_contents %}
+<div class = "row-fluid">
+	<div class = "well">
+		<!-------- upload step 1 ----------->
+		{% if step == "step1" %}
+		
+		<p>Step 1 : Reference's Informations</p><hr>
+		
+		<form action = "{% url 'referenceStep1'  %}" method = "POST" enctype = 'multipart/form-data'>
+			{% csrf_token %}
+			<table class="table table-striped">
+				{{form.as_table}}					
+			</table>
+			<span class="pull-right">
+				<input type = "submit" value = "submit" name = "submit">&#160;&#160;
+				<input type = "reset" value = "Reset" name = "reset">			
+			</span>	
+								
+		</form>
+		<span class="pull-left"><button onclick="window.location.href='{% url 'referenceStep2'  %}'">Skip this step</button></span>
+		<br>		
+		
+		{% endif %}
+		
+		<!-------- upload step 2 ----------->	
+		{% if step == "step2" %}
+		
+		<p>Step 2 : Details for Reference File to be uploaded</p><hr>
+		
+		<form action = "{% url 'referenceStep2'  %}" method = "POST" enctype = 'multipart/form-data'>
+			{% csrf_token %}
+			<table class="table table-striped">
+				{{form.as_table}}			
+			</table>
+			<input type = "submit" value = "Upload file" name = "submit">&#160;&#160;
+			<input type = "reset" value = "Reset" name = "reset">					
+		</form>
+		<br>
+		{% endif %}		
+		
+	</div>	
+</div>
+{% endblock%}
+
+{% block useful_links %}
+<li ><a href="/reference/">Reference</a></li>
+<li ><a href="{% url 'referenceDownload'  %}">Download Reference</a></li>
+<li ><a href="{% url 'referenceSearch'  %}">Search Reference</a></li>
+{% endblock%}
+
+

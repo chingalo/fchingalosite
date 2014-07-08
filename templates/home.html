@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags %}
+
+<!-- contents for home pages of reference, report and home page of the site -->
+{% block page_contents %}
+<div class = "row-fluid">
+	<div class = "well">
+		{% placeholder website_introduction %}<hr><br>
+	
+		{% placeholder slideshow_homepages or %} No Slideshow available at now {% endplaceholder%} <br>	
+	</div>	
+</div>
+{% endblock%}
+{% block useful_links %}
+<li >{% placeholder useful_link1  %}</li>
+<li >{% placeholder useful_link2  %}</li>
+<li >{% placeholder useful_link3  %}</li>
+<li >{% placeholder useful_link4 %}</li>
+<li>{% placeholder useful_link5  %}</li>
+{% endblock%}
+
+
+
